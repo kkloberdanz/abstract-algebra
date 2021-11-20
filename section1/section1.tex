@@ -13,8 +13,8 @@
 
 \begin{myparindent}{0pt}
 
-Author: Kyle Kloberdanz \newline
-Date: 20 November 2021 \newline
+Kyle Kloberdanz \newline
+20 November 2021 \newline
 
 \textbf{Exercise 1.1.1}:
 Given functions $\sigma: A \rightarrow B$ and $\tau: B \rightarrow C$,
@@ -24,7 +24,8 @@ prove that if $\tau \circ \sigma$ is injective, then so is $\sigma$.
 If the cardinality of A is greater than the cardinality of C, i.e.
 \[|A| > |C|\]
 then $\tau \circ \sigma$ is \textbf{not} injective via the
-pigeonhole principle, therefore it must be the case that
+pigeonhole principle, therefore in order for $\tau \circ \sigma$ to be
+injective, it must be the case that
 \[|A| \le |C|\]
 
 Applying the same logic from B to C, we can see that $|B| \le |C|$.
@@ -34,6 +35,25 @@ Therefore
 
 By definition, $|A| \le |B|$ implies an injective mapping from A to B,\newline
 thus $\sigma: A \rightarrow B$ is \underline{injective}.
+\end{proof}
+
+\textbf{Exercise 1.1.4}:
+Prove the Pigeonhole Principle for finite sets A and B.
+
+\begin{proof}
+Recall that the pigeonhole principle is the statement: if A and B are sets and
+$|A| > |B|$, then there is no injective function $\sigma: A \rightarrow B$.
+\newline
+\newline
+ Also recall that an injective function is a function
+ $\sigma: A \rightarrow B$ such that
+$\sigma(a_1) = \sigma(a_2)$ implies $a1 = a2$, where $a_1, a_2 \in A$
+\newline
+
+If we were to match each item in A with an item in B and if there were more
+items in A, then we would be left with no more items in B that can be paired
+with a unique item in A. Therefore, we would have duplicate items in A that
+paired with items from B, thus violating our one-to-one mapping from A to B.
 \end{proof}
 
 \end{myparindent}
