@@ -7,6 +7,8 @@
 }
 
 \documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \begin{document}
 
 \begin{myparindent}{0pt}
@@ -17,6 +19,20 @@ Date: 20 November 2021 \newline
 \textbf{Exercise 1.1.1}:
 Given functions $\sigma: A \rightarrow B$ and $\tau: B \rightarrow C$,
 prove that if $\tau \circ \sigma$ is injective, then so is $\sigma$.
+
+\begin{proof}
+If the cardinality of A is greater than the cardinality of C, i.e., if
+$|A| > |C|$, then $\tau \circ \sigma$ is \textbf{not} injective via the
+pigeonhole principle, therefore $|A| \le |B|$. \newline
+
+Applying the same logic from B to C, we can see that $|B| \le |C|$, and
+therefore we can see that $|B| \le |C|$. \newline
+
+Therefore $|A| \le |B|$ \newline
+
+By definition, $|A| \le |B|$ implies an injective mapping from A to B,\newline
+thus $\sigma: A \rightarrow B$ is \underline{injective}.
+\end{proof}
 
 \end{myparindent}
 
