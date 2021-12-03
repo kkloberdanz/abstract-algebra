@@ -1,0 +1,34 @@
+\newlength\mystoreparindent
+\newenvironment{myparindent}[1]{%
+\setlength{\mystoreparindent}{\the\parindent}
+\setlength{\parindent}{#1}
+}{%
+\setlength{\parindent}{\mystoreparindent}
+}
+
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+
+\begin{myparindent}{0pt}
+
+Kyle Kloberdanz \newline
+20 November 2021 \newline
+
+\textbf{Exercise 1.1.1}:
+Given functions $\sigma: A \rightarrow B$ and $\tau: B \rightarrow C$,
+prove that if $\tau \circ \sigma$ is injective, then so is $\sigma$.
+
+\begin{proof}
+Let's setup a proof by contradiction, assume $\sigma$ is not injective, then by
+definition there exists two distinct values $a_1$, $a_2$ $\in A$ such that 
+$\sigma(a_1) = \sigma(a_2)$.
+This implies that $\tau(\sigma(a_1)) = \tau(\sigma(a_2))$
+which contradicts the assumption that $x \in A$, $\tau(\sigma(x))$ is an injective function.
+Hence $a_1$ and $a_2$ cannot exist and $\sigma$ must be an injective function.
+\end{proof}
+
+\end{myparindent}
+
+\end{document}
