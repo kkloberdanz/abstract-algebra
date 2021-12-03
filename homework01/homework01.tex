@@ -47,31 +47,15 @@ that are, prove it. For those that are not, explain why. \newline
 \newline
 
 (i) $x \sim y$ if $\norm{x - y} \le 3$ \newline
-\begin{lemma}
-Before we begin our proof, let's first consider that for
-$x, y \in \mathbb{N}, \norm{x - y} = \norm{y - x}$. Let's now prove this lemma.
-\newline
 \begin{proof}
-$\norm{x - y} = \norm{x - y}$ \newline
-$\norm{x - y} = \norm{1} \times \norm{x - y}$ \newline
-$\norm{x - y} = \norm{-1} \times \norm{x - y}$ \newline
-$\norm{x - y} = \norm{-1 \times (x - y)}$ \newline
-$\norm{x - y} = \norm{-x + y}$ \newline
-$\norm{x - y} = \norm{y - x}$ \newline
-We have therefore shown that $x, y \in \mathbb{N}, \norm{x - y} = \norm{y - x}$
-and we will refer to this lemma in a future proof.
-\end{proof}
-\end{lemma}
-
-\begin{proof}
-First, for any $x \in \mathbb{N}, x - x = 0$. Furthermore $\norm{x - x} = 0 \le 3$.
-hense, $x \sim x$, and therefore we have demonstrated that this statement is reflexive. \newline
+We will demonstrate a proof by counterexample.
+We will demonstrate that there exists a situation such that $x \sim y$ and $y \sim z$ but $x \sim z$ is false.
+Let $x, y, z \in \mathbb{N}$ and let $x = 2$, $y = 4$, and $z = 6$. \newline
 \newline
-Second, given the above lemma proving that $\norm{x - y} = \norm{y - x}$, we can see that
-$\norm{x - y} \le 3$ is the same as $\norm{y - x} \le 3$, hence $x \sim y$ and $y \sim x$
-therefore we have demonstrated that this statement is symmetric. \newline
-\newline
-Third, if
+We can see that for the case of $x \sim y$ that $\norm{2 - 4} \le 3$ is true. \newline
+We can see that for the case of $y \sim z$ that $\norm{4 - 6} \le 3$ is true. \newline
+However, we can see that for the case of $x \sim z$ that $\norm{2 - 6} \le 3$ is false. \newline
+Hence, the statement is not transitive, and therefore it is not an equivalence relation.
 \end{proof}
 
 (ii) $x \sim y$ if $\norm{x - y} \ge 3$ \newline
@@ -85,17 +69,19 @@ hence $x \sim x$ is false, which means $x \sim y$ is not reflexive and therefore
 \begin{proof}
 Let the set $D$ be the set of decimal digits, which would be exactly $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$.
 Note that $D \subset \mathbb{N}$.
-Let $x_1, y_1, z_1 \in D$ be the digit in the one's place of $x, y, z \in \mathbb{N}$ respectively. \newline
+Let $x_1, y_1, z_1 \in D$ be the digit in the one's place of $x, y, z \in \mathbb{N}$ respectively.
+which means that a statement such as $x_1 = y_1$ would be read as $x$ and $y$ have the
+same digit in the one's place.\newline
 \newline
 
-First, because for any natural number $n \in \mathbb{N}, n$ is the same as itself,
+First, for any natural number $n \in \mathbb{N}, n$ is the same as itself,
 hence $x_1 = x_1$ and $y_1 = y_1$, and therefore $x \sim x$ and $y \sim y$ so it is reflexive. \newline
 \newline
 
-Second, observe that if $x_1 = y_1$, then $x \sim y$, furthermore $x_1$ is the same number as $y_1$, but then $y_1$ is the same number as $x_1$,
+Second, observe that if $x \sim y$, then $x_1 = y_1$, furthermore $x_1$ is the same number as $y_1$, but then $y_1$ is the same number as $x_1$,
 and hence $y \sim x$, so it is symmetric. \newline
 \newline
-Third, if $x_1 = y_1$ then $x \sim y$ and if $y_1 = z_1$ then $y \sim z$, then $x_1$ is the same as $y_1$ and $y_1$ is the same as $z_1$,
+Third, if $x \sim y$ then $x_1 = y_1$ and if $y \sim z$ then $y_1 = z_1$, then $x_1$ is the same as $y_1$ and $y_1$ is the same as $z_1$,
 so $x_1$ is the same as $z_1$, and hence $x \sim z$, and therefore it is transitive. \newline
 \newline
 Finally, because we have shown that the relation is reflexive, symmetric, and transitive, by definition
