@@ -9,6 +9,14 @@
 \documentclass[a4paper]{article}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{mathtools}
+
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+  #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
 \begin{document}
 
 \begin{myparindent}{0pt}
@@ -27,6 +35,43 @@ $\sigma(a_1) = \sigma(a_2)$.
 This implies that $\tau(\sigma(a_1)) = \tau(\sigma(a_2))$
 which contradicts the assumption that $x \in A$, $\tau(\sigma(x))$ is an injective function.
 Hence $a_1$ and $a_2$ cannot exist and $\sigma$ must be an injective function.
+\end{proof}
+
+\textbf{Exercise 1.2.2}:
+Decide which of the following are equivalence relations on the set of natural numbers $\mathbb{N}$. For those
+that are, prove it. For those that are not, explain why. \newline
+\newline
+(i) $x \sim y$ if $\norm{x - y} \le 3$ \newline
+TODO
+
+(ii) $x \sim y$ if $\norm{x - y} \ge 3$ \newline
+TODO
+
+(iii) $x \sim y$ if $x$ and $y$ have the same digit in the 1's place (expressed in base 10). \newline
+\begin{proof}
+Let the set $D$ be the set of decimal digits, which would be exactly $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$.
+Note that $D \subset \mathbb{N}$.
+Let $x_1, y_1, z_1 \in D$ be the digit in the one's place of $x, y, z \in \mathbb{N}$ respectively. \newline
+\newline
+First, because for any natural number $n \in \mathbb{N}, n$ is the same as itself,
+therefore $x_1 \sim x_1$ and $y_1 \sim y_1$, so it is reflexive. \newline
+\newline
+Second, observe that if $x_1 \sim y_1$, then $x_1$ is the same number as $y_1$, but then $y_1$ is the same number as $x_1$,
+and hence $y_1 \sim x_1$, so it is symmetric. \newline
+\newline
+Third, if $x_1 \sim y_1$ and $y_1 \sim z_1$, then $x_1$ is the same as $y_1$ and $y_1$ is the same as $z_1$,
+so $x_1$ is the same as $z_1$, and hence $x_1 \sim z_1$, and therefore it is transitive. \newline
+\newline
+Finally, because we have shown that the relation is reflexive, symmetric, and transitive, by definition
+this is an equivalence relation.
+\end{proof}
+
+
+(iv) $x \sim y$ if $x \ge y$ \newline
+\begin{proof}
+We will demonstrate a proof by counterexample. Let $x = 2$ and $y = 1$. In this scenario, $x \sim y$ because
+$2 \ge 1$, however $y \sim x$ is false, because that would imply $1 \ge 2$, which is absurd. This relation
+therefore does not demonstrate symmetry, and is therefore not an equivalence relation.
 \end{proof}
 
 \end{myparindent}
