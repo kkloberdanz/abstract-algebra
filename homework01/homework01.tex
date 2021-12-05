@@ -237,10 +237,10 @@ $\sigma(\sigma^{-1}(8)) = \sigma(7) = 8$ \newline
 
 \[
     \sigma \circ \sigma^{-1} =
-  \begin{pmatrix}
-      1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
-      1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
-  \end{pmatrix}
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+    \end{pmatrix}
 \]
 
 We can see that we have correctly found $\sigma^{-1}$ in disjoint cycle notation to be:
@@ -258,7 +258,106 @@ and $\tau = \begin{array}{rrrr} (1 & 9 & 3 & 5) \end{array}$ $\begin{array}{rrrr
 in $S_9$ expressed in disjoint cycle notation.
 Compute $\sigma \circ \tau$ and $\tau \circ \sigma$, expressing both in disjoint cycle notation. \newline
 
-TODO \newline
+In matrix form:
+
+\[
+    \sigma =
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+        1 & 2 & 4 & 8 & 7 & 9 & 6 & 3 & 5 \\
+    \end{pmatrix}
+\]
+
+\[
+    \tau =
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+        9 & 7 & 5 & 2 & 1 & 6 & 4 & 8 & 3 \\
+    \end{pmatrix}
+\]
+
+For $\sigma$:
+
+$\sigma(1) = 1$ \newline
+$\sigma(2) = 2$ \newline
+$\sigma(3) = 4$ \newline
+$\sigma(4) = 8$ \newline
+$\sigma(5) = 7$ \newline
+$\sigma(6) = 9$ \newline
+$\sigma(7) = 6$ \newline
+$\sigma(8) = 3$ \newline
+$\sigma(9) = 5$ \newline
+
+For $\tau$:
+
+$\tau(1) = 9$ \newline
+$\tau(2) = 7$ \newline
+$\tau(3) = 5$ \newline
+$\tau(4) = 2$ \newline
+$\tau(5) = 1$ \newline
+$\tau(6) = 6$ \newline
+$\tau(7) = 4$ \newline
+$\tau(8) = 8$ \newline
+$\tau(9) = 3$ \newline
+
+For $\sigma \circ \tau$:
+
+$\sigma(\tau(1)) = \sigma(9) = 5$ \newline
+$\sigma(\tau(2)) = \sigma(7) = 6$ \newline
+$\sigma(\tau(3)) = \sigma(5) = 7$ \newline
+$\sigma(\tau(4)) = \sigma(2) = 2$ \newline
+$\sigma(\tau(5)) = \sigma(1) = 1$ \newline
+$\sigma(\tau(6)) = \sigma(6) = 9$ \newline
+$\sigma(\tau(7)) = \sigma(4) = 8$ \newline
+$\sigma(\tau(8)) = \sigma(8) = 3$ \newline
+$\sigma(\tau(9)) = \sigma(3) = 4$ \newline
+
+In matrix form:
+
+\[
+    \sigma \circ \tau =
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+        5 & 6 & 7 & 2 & 1 & 9 & 8 & 3 & 4 \\
+    \end{pmatrix}
+\]
+
+In disjoint cycle notation:
+
+\[
+    \noindent \sigma \circ \tau = \begin{array}{rr} (1 & 5) \end{array}
+    \noindent \begin{array}{rrrrr} (2 & 6 & 9 & 4) \end{array}
+    \noindent \begin{array}{rrr} (3 & 7 & 8) \end{array}
+\]
+
+
+For $\tau \circ \sigma$:
+
+$\tau(\sigma(1)) = \tau(1) = 9$ \newline
+$\tau(\sigma(2)) = \tau(2) = 7$ \newline
+$\tau(\sigma(3)) = \tau(4) = 2$ \newline
+$\tau(\sigma(4)) = \tau(8) = 8$ \newline
+$\tau(\sigma(5)) = \tau(7) = 4$ \newline
+$\tau(\sigma(6)) = \tau(9) = 3$ \newline
+$\tau(\sigma(7)) = \tau(6) = 6$ \newline
+$\tau(\sigma(8)) = \tau(3) = 5$ \newline
+$\tau(\sigma(9)) = \tau(5) = 1$ \newline
+
+\[
+    \tau \circ \sigma =
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+        9 & 7 & 2 & 8 & 4 & 3 & 6 & 5 & 1 \\
+    \end{pmatrix}
+\]
+
+In disjoint cycle notation:
+
+\[
+    \noindent \tau \circ \sigma = \begin{array}{rr} (1 & 9) \end{array}
+    \noindent \begin{array}{rrrrr} (2 & 7 & 6 & 3) \end{array}
+    \noindent \begin{array}{rrr} (4 & 8 & 5) \end{array}
+\]
 
 \end{myparindent}
 \end{document}
