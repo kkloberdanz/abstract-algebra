@@ -109,19 +109,29 @@ Recall that Example 1.2.6 states: Suppose $f : X \rightarrow Y$ is a function.
 Define a relation $\sim_f$ on $X$ by $x \sim_f y$ if $f(x) = f(y)$.
 
 \begin{proof}
-    First, let's determine whether the relation is reflexive. Because $f(x)$
-    is the same as $f(x)$, we can see that $f(x) = f(x)$,
+    First, we will show that the relation is an equivalence relation. \newline
+
+    Because $f(x)$ is the same as $f(x)$, we can see that $f(x) = f(x)$,
     so therefore we can see that the relation is reflexive. \newline
 
-    Second, if $f(x) = f(y)$, then $f(x)$ is the same as $f(y)$, so $f(y) = f(x)$,
+    If $f(x) = f(y)$, then $f(x)$ is the same as $f(y)$, so $f(y) = f(x)$,
     and therefore symmetric. \newline
 
-    Third, if $f(x) = f(y)$ and $f(y) = f(z)$ where $z \in X$, then $f(x)$ is
+    If $f(x) = f(y)$ and $f(y) = f(z)$ where $z \in X$, then $f(x)$ is
     the same as $f(y)$, but then $f(y)$ is the same as $f(z)$, hence $f(x) = f(z)$
     therefore the relation is transitive. \newline
 
-    Finally, because the relation is reflexive, symmetric, and transitive, it
-    is therefore an equivalence relation.
+    Because the relation is reflexive, symmetric, and transitive, it
+    is therefore an equivalence relation. \newline
+
+    Next, we will show that for any $x \in X$, the equivalence class of x is
+    precisely $[x] = f^{-1}(f(x))$. \newline
+
+    Since $[x]$ is the set $\{y \in X | y \sim_f x\}$, which when substituting
+    the definition of $\sim_f$ is $\{y \in X | f(y) = f(x)\}$. With the preimage
+    of $f(x)$ being defined as $f^{-1}(f(x)) = \{ y \in X | f(y) = f(x) \}$.
+    We can see that these sets are precisely the same, so therefore $[x]$ is
+    precisely $f^{-1}(f(x))$.
 \end{proof}
 
 \textbf{Exercise 1.2.4}:
