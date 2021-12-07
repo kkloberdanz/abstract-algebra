@@ -129,12 +129,16 @@ Define a relation $\sim_f$ on $X$ by $x \sim_f y$ if $f(x) = f(y)$.
 
     By definition $[x]$ is the set $\{y \in X | y \sim_f x\}$, which when substituting
     the definition of $\sim_f$ is $[x] = \{y \in X | f(y) = f(x)\}$. With the preimage
-    of $f(x)$ being defined as $f^{-1}(Y) = \{ y \in X | f(y) \in Y \}$.
+    of $f$ being defined as $f^{-1}(Y) = \{ y \in X | f(y) \in Y \}$.
     Because $f$ is the same function as $f$, if the domain on $f$ is the same,
     then the range on $f$ is also the same. This means that in the scenario
     when we compose $f^{-1}$ with $f(x)$, $f(x)$ will yield
-    a singular value from $Y$. We therefore can write our preimage when applied
-    to $f(x)$ as $f^{-1}(f(x)) = \{ y \in X | f(y) = f(x) \}$. We can see
+    a singular value from $Y$. In other words, for any given $x$, $f(x)$
+    would give us a singleton set for that particular $x$ input, and if we have
+    some item $a$ in a singlton set containing $b$, i.e. $a \in \{b\}$, we can
+    conclude that $a = b$. Hence we can conclude that when we take the preimage
+    of $f(x)$, we can write the resulting set as follows
+    $f^{-1}(f(x)) = \{ y \in X | f(y) = f(x) \}$. We can see
     that this set that we have found for $f^{-1}(f(x))$ is eactly the same
     as the set we found for $[x]$
     We can see that these sets are precisely the same, so therefore $[x]$ is
