@@ -111,8 +111,8 @@ Define a relation $\sim_f$ on $X$ by $x \sim_f y$ if $f(x) = f(y)$.
 \begin{proof}
     First, we will show that the relation is an equivalence relation. \newline
 
-    Because $f(x)$ is the same as $f(x)$, we can see that $f(x) = f(x)$,
-    so therefore we can see that the relation is reflexive. \newline
+    Because $x$ is the same as $x$ and $f$ is the same as $f$, we can see that
+    $f(x) = f(x)$, so therefore we can see that the relation is reflexive. \newline
 
     If $f(x) = f(y)$, then $f(x)$ is the same as $f(y)$, so $f(y) = f(x)$,
     and therefore symmetric. \newline
@@ -130,15 +130,13 @@ Define a relation $\sim_f$ on $X$ by $x \sim_f y$ if $f(x) = f(y)$.
     By definition $[x]$ is the set $\{y \in X | y \sim_f x\}$, which when substituting
     the definition of $\sim_f$ is $[x] = \{y \in X | f(y) = f(x)\}$. With the preimage
     of $f$ being defined as $f^{-1}(Y) = \{ y \in X | f(y) \in Y \}$.
-    Because $f$ is the same function as $f$, if the domain on $f$ is the same,
-    then the range on $f$ is also the same. This means that in the scenario
-    when we compose $f^{-1}$ with $f(x)$, $f(x)$ will yield
+    For a given $x$, $f(x)$ will yield
     a singular value from $Y$. In other words, for any given $x$, $f(x)$
     would give us a singleton set for that particular $x$ input, and if we have
     some item $a$ in a singlton set containing $b$, i.e. $a \in \{b\}$, we can
     conclude that $a = b$. Hence we can conclude that when we take the preimage
     of $f(x)$, we can write the resulting set as follows
-    $f^{-1}(f(x)) = \{ y \in X | f(y) = f(x) \}$. We can see
+    $f^{-1}(f(x)) = \{ y \in X | f(y) \in \{f(x\} \} = \{ y \in X | f(y) = f(x) \}$. We can see
     that this set that we have found for $f^{-1}(f(x))$ is eactly the same
     as the set we found for $[x]$
     We can see that these sets are precisely the same, so therefore $[x]$ is
