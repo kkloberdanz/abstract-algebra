@@ -26,7 +26,7 @@
 \begin{myparindent}{0pt}
 
 Kyle Kloberdanz \newline
-20 November 2021 \newline
+12 December 2021 \newline
 
 \textbf{Exercise 1.1.1}:
 Given functions $\sigma: A \rightarrow B$ and $\tau: B \rightarrow C$,
@@ -144,12 +144,23 @@ Define a relation $\sim_f$ on $X$ by $x \sim_f y$ if $f(x) = f(y)$.
 \end{proof}
 
 \textbf{Exercise 1.2.4}:
-Prove Proposition 1.2.13: If $\sim$ is an equivalence relation on $X$, then the function $\pi: X \rightarrow X/\sim$
+Prove Proposition 1.2.12: If $\sim$ is an equivalence relation on $X$, then the function $\pi: X \rightarrow X/\sim$
 defined by $\pi(x) = [x]$ is a surjective map, and the equivalence relation $\sim_{\pi}$ determined by $\pi$ is
 precisely $\sim$. \newline
 
 \begin{proof}
-TODO \newline
+    First we will show that the function is a surjective map. By definition,
+    for any $[x] \in X/\sim$ then $\pi(x) = [x]$ where $x \in X$, therefore
+    the function $\pi: X \rightarrow X/\sim$ is a surjective map.  \newline
+
+    Next, we will show that equivalence relation $\sim_{\pi}$ determined by
+    $\pi$ is precisely $\sim$. Recall that $X/\sim$ = $\{ [x] \mid x \in X \}$
+    also, $x \sim_{\pi} y$ implies $\pi(x) = \pi(y)$. Also note that
+    $\pi(x) = [x]$ and $\pi(y) = [y]$ where $x, y \in X$. If $x \sim_{\pi} y$
+    then $\pi(x) = \pi(y)$. Furthermore $[x] = [y]$.
+    Given that the definition of an equivalence class is $[a] = \{b \in A \mid b \sim a \}$,
+    by this definition, we see that $x \sim y$, which shows that the equivalence
+    relation $\sim_{\pi}$ is precisely $\sim$
 \end{proof}
 
 \textbf{Exercise 1.3.1}:
