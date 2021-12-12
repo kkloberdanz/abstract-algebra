@@ -1,8 +1,8 @@
 .PHONY: all
-all: homework01.pdf
+all: kloberdanz_417HW01.pdf
 
-homework01.pdf: homework01.tex
-	pdflatex homework01.tex
+kloberdanz_417HW01.pdf: kloberdanz_417HW01.tex
+	pdflatex kloberdanz_417HW01.tex
 
 .PHONY: clean
 clean:
