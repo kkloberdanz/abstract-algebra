@@ -1,0 +1,89 @@
+\newlength\mystoreparindent
+\newenvironment{myparindent}[1]{%
+\setlength{\mystoreparindent}{\the\parindent}
+\setlength{\parindent}{#1}
+}{%
+\setlength{\parindent}{\mystoreparindent}
+}
+
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+  #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\begin{document}
+
+\begin{myparindent}{0pt}
+
+Kyle Kloberdanz \newline
+12 December 2021 \newline
+
+\textbf{Exercise 1.4.2}:
+Prove that if $a, b, c, m, n \in \mathbb{Z}$, $a|c$, and $a|c$, then $a|(mb + nc)$
+\begin{proof}
+\end{proof}
+
+\textbf{Exercise 1.4.3}:
+For each of the pairs $(a, b) = (130, 95), (1295, 406), (1351, 165)$, find $gcd(a, b)$
+using the Euclidean Algorithm and express it in the form $gcd(a, b) = m_0 a + n_0 b$
+for $m_0, n_0 \in \mathbb{Z}$. \newline
+
+$gcd(130, 95)$ \newline
+$130 = 95 \times q + r$ \newline
+$130 = 95 \times 1 + 35$ \newline
+$95 = 35 \times 2 + 25$ \newline
+$35 = 25 \times 1 + 10$ \newline
+$25 = 10 \times 2 + 5$ \newline
+$10 = 5 \times 2 + 0$ \newline
+
+Therefore, $gcd(130, 95) = 5$ \newline
+
+$gcd(1295, 406)$ \newline
+$1295 = 406 \times q + r$ \newline
+$1295 = 406 \times 3 + 77$ \newline
+$406 = 77 \times 5 + 21$ \newline
+$77 = 21 \times 3 + 14$ \newline
+$21 = 14 \times 1 + 7$ \newline
+$14 = 7 \times 2 + 0$ \newline
+
+Therefore, $gcd(1295, 406) = 7$ \newline
+
+$gcd(1351, 165)$ \newline
+$1351 = 165 \times 8 + 31$ \newline
+$165 = 31 \times 5 + 10$ \newline
+$31 = 10 \times 3 + 1$ \newline
+$10 = 3 \times 3 + 1$ \newline
+$3 = 1 \times 3 + 0$ \newline
+
+Therefore, $gcd(1351, 165) = 1$ \newline
+\newline
+
+\textbf{Exercise 1.4.4}:
+Suppose $a, b, c \in \mathbb{Z}$. Prove that if $gcd(a, b) = 1, a|c, b|c,$ then $ab|c$
+\begin{proof}
+\end{proof}
+
+\textbf{Exercise 1.5.2}:
+Write down the addition and multiplication tables for $\mathbb{Z}_5$
+
+\textbf{Exercise 1.5.3}:
+List all elements of $\mathbb{Z}_5^x, \mathbb{Z}_6^x, \mathbb{Z}_8^x$, and $\mathbb{Z}_{20}^x$.
+
+\textbf{Exercise 1.5.4}:
+Prove that if $m|n$, then $\pi_{m, n}: \mathbb{Z}_n \rightarrow \mathbb{Z}_m$ is well defined.
+
+\begin{proof}
+\end{proof}
+
+\end{myparindent}
+\end{document}
