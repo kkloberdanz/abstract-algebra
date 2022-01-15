@@ -29,8 +29,18 @@ Kyle Kloberdanz \newline
 12 December 2021 \newline
 
 \textbf{Exercise 1.4.2}:
-Prove that if $a, b, c, m, n \in \mathbb{Z}$, $a|c$, and $a|c$, then $a|(mb + nc)$
+Prove that if $a, b, c, m, n \in \mathbb{Z}$, $a|c$, and $a|c$, then
+$a|(mb + nc)$
 \begin{proof}
+Recall that $a|b$ implies $b = xa, x \in \mathbb{Z}$
+and $a|c$ implies $c = ya, y \in \mathbb{Z}$. Hence we can write
+$b + c = xa + ya$. We can see that $a | xa$ and $a | ya$, hence $a | (xa + ya)$,
+therefore $a | (b + c)$.
+\newline
+
+It is also true that $a | xam$ and $a | yan$, hence $a | (xam + yan)$,
+therefore \newline
+$a | (mb + nc)$
 \end{proof}
 
 \textbf{Exercise 1.4.3}:
