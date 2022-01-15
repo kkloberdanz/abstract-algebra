@@ -82,6 +82,13 @@ Therefore, $gcd(1351, 165) = 1$ \newline
 \textbf{Exercise 1.4.4}:
 Suppose $a, b, c \in \mathbb{Z}$. Prove that if $gcd(a, b) = 1, a|c, b|c,$ then $ab|c$
 \begin{proof}
+Recall that $gcd(a, b) = 1$ implies $ma + nb = 1$ where $m, n \in \mathbb{Z}$.
+Also recall that $a | c$ implies $c = xa$ and $b | c$ implies $c  = yb$
+where $x, y \in \mathbb{Z}$.
+
+Given the facts above, we can multiply $ma + nb = 1$ by $c$ to find that
+$c = cma + cnb$. Substituting for $c$, we find $c = ybma + xanb$. Factoring out
+$ab$ yields $c = ab(ym + xn)$, therefore $ab | c$
 \end{proof}
 
 \textbf{Exercise 1.5.2}:
