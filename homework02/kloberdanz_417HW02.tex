@@ -149,6 +149,23 @@ Prelude> map (\n -> [x | x <- [1..n], gcd x n == 1]) [5, 6, 8, 20]
 Prove that if $m|n$, then $\pi_{m, n}: \mathbb{Z}_n \rightarrow \mathbb{Z}_m$ is well defined.
 
 \begin{proof}
+
+Recall from the text that $\pi_{m, n}([a]_n) = [a]_m$.
+Recall that a function, $f$, is well-defined if $[x] = [y] \implies f(x) = f(y)$.
+Recall Proposition 1.4.2 (iv), which states if $a|b$ and $b|c$, then $a|c$ \newline
+
+Therefore, we must show that: \newline
+
+If $m | n$ and $[x]_n = [y]_n$ where $x, y \in \mathbb{Z}$, then
+$\pi_{m, n}(x) = \pi_{m, n}(y)$ where $\pi_{m, n}: \mathbb{Z}_n \rightarrow \mathbb{Z}_m$
+and therefore $[x]_m = [y]_m$. \newline
+
+$[x]_n = [y]_n$ implies $x \equiv y \pmod{n}$, hence $n | (x - y)$. \newline
+
+Because $m | n$ and $n | (x - y)$, then by Proposition 1.4.2 (iv), we see that
+$m | (x - y)$, hence $x \equiv y \pmod{m}$, hence $[x]_m = [y]_m$,
+therefore $\pi_{m, n}$ is well-defined.
+
 \end{proof}
 
 \end{myparindent}
