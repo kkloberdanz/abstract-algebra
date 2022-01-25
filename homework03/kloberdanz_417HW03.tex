@@ -62,15 +62,40 @@ statements:
 \begin{enumerate}[label=(\roman*)]
   \item $z + \overline{z}$ is real and $z - \overline{z}$ is imaginary.
     \begin{proof}
-    TODO
+        First let's begin with proving $z + \overline{z}$ is real. \newline
+        Recall that if $z = a + bi$, then $\overline{z} = a - bi$. \newline
+        Notice that complex numbers are the set $\{ a + bi | a, b \in \mathbb{R} \}$
+
+        $z + \overline{z} = (a + bi) + (a - bi) = 2a + bi - bi = 2a$ \newline
+
+        Because $2 \in \mathbb{R}$ and $a \in \mathbb{R}$, and real numbers are
+        closed under multiplication, $2a$ is also real, therefore
+        $z + \overline{z}$ is real. \newline
+
+        Next, we will prove that $z - \overline{z}$ is imaginary. \newline
+        $z - \overline{z} = (a + bi) - (a - bi) = a - a + bi + bi = 2bi$. \newline
+
+        Because $2 \in \mathbb{R}$ and $b \in \mathbb{R}$, and real numbers
+        are closed under multiplication, then $2b \in \mathbb{R}$. Imaginary
+        numbers are the set $\{ ci | c \in \mathbb{R} \}$. We can see that
+        $2bi \in \{ ci | c \in \mathbb{R} \}$, therefore $z - \overline{z}$
+        is imaginary.
     \end{proof}
+
   \item $\overline{z + w} = \overline{z} + \overline{w}$.
     \begin{proof}
-    TODO
+        $z + w = (a + bi) + (c + di) = a + bi + c + di = (a + c) + (b + d)i$ \newline
+
+        $\overline{z + w} = (a + c)- (c + d)i = a + c - bi - di = $
+        $(a - bi) + (c - di) = \overline{z} + \overline{w}$
     \end{proof}
+
   \item $\overline{zw} = \overline{z}$ $\overline{w}$.
     \begin{proof}
-    TODO
+        $zw = (a + bi)(c + di) = ac + adi + bci -bd = (ac - bd) + (ad + bc)i$ \newline
+
+        $\overline{zw} = (ac - bd) - (ad + bc)i = ac - bd - adi - bci =$ \newline
+        $(a - bi)(c - di) = \overline{z}$ $\overline{w}$
     \end{proof}
 \end{enumerate}
 
