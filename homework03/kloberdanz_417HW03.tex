@@ -104,7 +104,35 @@ Prove that if $\mathbb{F}$ is a field and $a, b \in \mathbb{F}$ with $ab = 0$,
 then either $a = 0$ or $b = 0$.
 
 \begin{proof}
-TODO
+  We will demonstrate a proof by contradiction. We will show that for the
+  statement $ab = 0$ if neither $a = 0$ nor $b = 0$, i.e.,
+  $a \ne 0$ and $b \ne 0$, then this will result in a contradiction. \newline
+
+  Recall from the definition of a field, that every nonzero element
+  $a \in \mathbb{F}$ has a multiplicative inverse $a^{-1}$, such that
+  $aa^{-1} = 1$ \newline
+
+  Because $\mathbb{F}$ is a field, and we are assuming that $a \ne 0$ and
+  $b \ne 0$, then we can take the multiplicative inverse of either in the
+  statement $ab = 0$. \newline
+
+  $ab = 0$ \newline
+  $a^{-1}ab = 0a^{-1} = 0$ \newline
+  $b = 0$ \newline
+
+  We have thus contradicted the statement that $b \ne 0$. Let's try this again
+  for $a$. \newline
+
+  $ab = 0$ \newline
+  $ab^{-1}b = 0b^{-1} = 0$ \newline
+  $a = 0$ \newline
+
+  Again we have contradicted the statement by finding that $a = 0$. \newline
+
+  Because we have found a contradiction in statement that if $ab = 0$ then
+  $a \ne 0$ and $b \ne 0$, we have therefore proven the original statement to be
+  true that if $ab = 0$ then either $a = 0$ or $b = 0$
+
 \end{proof}
 
 \textbf{Exercise 2.2.2}:
