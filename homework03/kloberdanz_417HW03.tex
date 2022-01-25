@@ -1,0 +1,109 @@
+\newlength\mystoreparindent
+\newenvironment{myparindent}[1]{%
+\setlength{\mystoreparindent}{\the\parindent}
+\setlength{\parindent}{#1}
+}{%
+\setlength{\parindent}{\mystoreparindent}
+}
+
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+  #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\begin{document}
+
+\begin{myparindent}{0pt}
+
+Kyle Kloberdanz \newline
+24 January 2022 \newline
+
+\textbf{Exercise 2.1.1}:
+Prove that multiplication of complex numbers is associative. More precisely,
+let $z = a + bi$, $w = c + di$, and $v = g + hi$, and prove that
+$z(wv) = (zw)v$.
+
+\begin{proof}
+TODO
+\end{proof}
+
+\textbf{Exercise 2.1.2}:
+Let $z = a + bi$, $w = c + di \in \mathbb{C}$ and prove each of the following
+statements:
+
+\begin{enumerate}[label=(\roman*)]
+  \item $z + \overline{z}$ is real and $z - \overline{z}$ is imaginary.
+    \begin{proof}
+    TODO
+    \end{proof}
+  \item $\overline{z + w} = \overline{z} + \overline{w}$.
+    \begin{proof}
+    TODO
+    \end{proof}
+  \item $\overline{zw} = \overline{z}$ $\overline{w}$.
+    \begin{proof}
+    TODO
+    \end{proof}
+\end{enumerate}
+
+\textbf{Exercise 2.2.1}:
+Prove that if $\mathbb{F}$ is a field and $a, b \in \mathbb{F}$ with $ab = 0$,
+then either $a = 0$ or $b = 0$.
+
+\begin{proof}
+TODO
+\end{proof}
+
+\textbf{Exercise 2.2.2}:
+Prove that $\mathbb{Q}(\sqrt{2})$ is a field. Hint: you should use the fact that
+$\sqrt{2} \notin \mathbb{Q}$.
+
+\begin{proof}
+TODO
+\end{proof}
+
+\textbf{Exercise 2.3.1}:
+Prove parts (iii)-(v) of Proposition 2.3.2:
+
+Suppose $\mathbb{F}$ is a field.
+
+\begin{enumerate}[label=(\roman*)]
+  \item Addition and multiplication are commutative, associative operations on
+  $\mathbb{F}[x]$ which restrict to the operations of addition and multiplication
+  on $\mathbb{F} \subset \mathbb{F}[x]$.
+
+  \item Multiplication distributes over addition: $f(g + h) = fg + gh$ for all
+  $f, g, h \in \mathbb{F}[x]$
+
+  \item $0 \in \mathbb{F}$ is an additive identity in $\mathbb{F}[x]: f + 0 = f$
+  for all $f \in \mathbb{F}[x]$.
+    \begin{proof}
+    TODO
+    \end{proof}
+
+  \item Every $f \in \mathbb{F}[x]$ has an additive inverse given by
+  $-f = (-1)f$ with $f + (-f) = 0$.
+    \begin{proof}
+    TODO
+    \end{proof}
+
+  \item $1 \in \mathbb{F}$ is the multiplicative identity in
+  $\mathbb{F}[x]: 1f = f$ for all $f \in \mathbb{F}[x]$.
+    \begin{proof}
+    TODO
+    \end{proof}
+\end{enumerate}
+
+\end{myparindent}
+\end{document}
