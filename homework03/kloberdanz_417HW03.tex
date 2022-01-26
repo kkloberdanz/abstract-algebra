@@ -150,12 +150,12 @@ $\sqrt{2} \notin \mathbb{Q}$.
 
   We will now demonstrate that $\mathbb{Q}(\sqrt{2})$ is a subfield of $\mathbb{R}$.
   In order for a subset $\mathbb{K}$ to be a subfield of a field $\mathbb{F}$,
-  the following properties must hold for every $a, b \in \mathbb{K}$.
+  the following properties must hold for every $x, y \in \mathbb{K}$.
   \begin{enumerate}[label=(\roman*)]
     \item $\mathbb{K} \subset \mathbb{F}$
     \item The elements $0, 1 \in \mathbb{F}$ are also in $\mathbb{K}$
-    \item $a + b$, $ab$, $-a \in \mathbb{K}$
-    \item if $a \ne 0$ then $a^{-1} \in \mathbb{K}$
+    \item $x + y$, $xy$, $-x \in \mathbb{K}$
+    \item if $x \ne 0$ then $x^{-1} \in \mathbb{K}$
   \end{enumerate}
 
   First, proving (i), Given the problem statement from the book, we see that $b \sqrt{2} \in \mathbb{R}$.
@@ -169,27 +169,31 @@ $\sqrt{2} \notin \mathbb{Q}$.
   $1 + 0 \sqrt{2} = 1$ and if $a = 0$ and $b = 0$, then $0 + 0 \sqrt{2} = 0$,
   hence $0, 1 \in \mathbb{Q}(\sqrt{2})$. \newline
 
-  Third, proving (iii): let $c, d, e, f \in \mathbb{Q}$, $a = c + d \sqrt{2}$,
-  $b = e + f \sqrt{2}$. \newline
+  Third, proving (iii): let $c, d, e, f \in \mathbb{Q}$, $x = c + d \sqrt{2}$,
+  $y = e + f \sqrt{2}$. \newline
 
-    $a + b = (c + d \sqrt{2}) + (e + f \sqrt{2}) = ((c + e) + (d + f) \sqrt{2})$
+    $x + y = (c + d \sqrt{2}) + (e + f \sqrt{2}) = ((c + e) + (d + f) \sqrt{2})$
     $\in \mathbb{Q}(\sqrt{2})$ \newline
 
-    $ab = (c + d \sqrt{2})(e + f \sqrt{2}) = cd + cf \sqrt{2} + de \sqrt{2} + 2df =$ \newline
+    $xy = (c + d \sqrt{2})(e + f \sqrt{2}) = cd + cf \sqrt{2} + de \sqrt{2} + 2df =$ \newline
     $((ce + 2df) + (cf + de) \sqrt{2}) \in \mathbb{Q}(\sqrt{2})$ \newline
 
-    $-a = -(c + d \sqrt{2}) = (-c + -d \sqrt{2}) \in \mathbb{Q}(\sqrt{2})$ \newline
-    Also, we can see that $-a$ is the additive inverse such that $-a + a = 0$. \newline
-    $-a + a = (-c + -d \sqrt{2}) + (c + d \sqrt{2}) = c - c + d \sqrt{2} - d \sqrt{2} =$
+    $-x = -(c + d \sqrt{2}) = (-c + -d \sqrt{2}) \in \mathbb{Q}(\sqrt{2})$ \newline
+    Also, we can see that $-x$ is the additive inverse such that $-x + x = 0$. \newline
+    $-x + x = (-c + -d \sqrt{2}) + (c + d \sqrt{2}) = c - c + d \sqrt{2} - d \sqrt{2} =$
     $0 + 0 = 0$ \newline
 
-    Finally, proving (iv), recall $aa^{-1} = 1$. \newline
-    $a^{-1} = \frac{1}{a} = \frac{1}{c + d \sqrt{2}} = $
+    Finally, proving (iv), recall $xx^{-1} = 1$. \newline
+    $x^{-1} = \frac{1}{x} = \frac{1}{c + d \sqrt{2}} = $
     $\frac{c - d \sqrt{2}}{(c + d \sqrt{2})(c - d \sqrt{2})} =$
     $\frac{c - d \sqrt{2}}{c^2 - cd \sqrt{2} + cd \sqrt{2} - 2d^2} =$
     $\frac{c - d \sqrt{2}}{c^2 - 2d^2} =$ \newline
     $(\frac{c}{c - d \sqrt{2}}) + (\frac{-d}{c^2 - 2d^2}) \sqrt{2}$
-    $\in \mathbb{Q}(\sqrt{2})$
+    $\in \mathbb{Q}(\sqrt{2})$ \newline
+
+    By showing that $\mathbb{Q}(\sqrt{2})$ is a subfield of $\mathbb{R}$,
+    which is itself a field, we have shown that$\mathbb{Q}(\sqrt{2})$ is a
+    field.
 
 \end{proof}
 
