@@ -222,19 +222,40 @@ Suppose $\mathbb{F}$ is a field.
   \item $0 \in \mathbb{F}$ is an additive identity in $\mathbb{F}[x]: f + 0 = f$
   for all $f \in \mathbb{F}[x]$.
     \begin{proof}
-    TODO
+      Let
+      \[
+        f \in \mathbb{F}[x], f = \sum_{k=0}^{n} a_k x^k
+      \]
+      Observe:
+      \[
+        f + 0 = \sum_{k=0}^{n} (a_k + 0) x^k = \sum_{k=0}^{n} a_k x^k = f
+      \]
     \end{proof}
 
   \item Every $f \in \mathbb{F}[x]$ has an additive inverse given by
   $-f = (-1)f$ with $f + (-f) = 0$.
     \begin{proof}
-    TODO
+      Let
+      \[
+        f \in \mathbb{F}[x], f = \sum_{k=0}^{n} a_k x^k
+      \]
+      Observe:
+      \[
+        f + (-1)f = f + (-f) = \sum_{k=0}^{n} (a_k + (-1)a_k) x^k = \sum_{k=0}^{n} (a_k + (- a_k)) x^k = \sum_{k=0}^{n} 0 x^k = 0
+      \]
     \end{proof}
 
   \item $1 \in \mathbb{F}$ is the multiplicative identity in
   $\mathbb{F}[x]: 1f = f$ for all $f \in \mathbb{F}[x]$.
     \begin{proof}
-    TODO
+      Let
+      \[
+        f \in \mathbb{F}[x], f = \sum_{k=0}^{n} a_k x^k
+      \]
+      Observe:
+      \[
+        (1)f = \sum_{k=0}^{n} (1) a_k x^k = \sum_{k=0}^{n} a_k x^k = f
+      \]
     \end{proof}
 \end{enumerate}
 
