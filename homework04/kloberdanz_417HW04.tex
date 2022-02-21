@@ -39,6 +39,30 @@ Prove that a polynomial $f \in \mathbb{F}[x]$ of degree 3 is irreducible in
 $\mathbb{F}[x]$ if it does not have a root in $\mathbb{F}$.
 \newline
 \begin{proof}
+  Recall, for a polynomial $f$ to be irreducible, one must be able to write
+  $f = uv$ where either $u$ or $v$ is a nonzero constant polynomial, i.e.,
+  either $deg(u) = 0$ or $deg(v) = 0$. \newline
+
+  We will demonstrate a proof by contrapositive where we will show that a
+  polynomial $f \in \mathbb{F}[x]$ of degree 3 has
+  a root in $\mathbb{F}$ if $f$ is not irreducible (i.e., $f$ is reducible)
+  \newline
+
+  Because we are assuming that $f$ is reducible, then we can write $f = uv$
+  where $deg(u) > 0$ and $deg(v) > 0$. Because $deg(uv) = deg(u) + deg(v)$ and
+  $deg(f) = 3$ (as per the problem statement), then we have two cases, either
+  $deg(u) = 1$ and $deg(v) = 2$ or $deg(u) = 2$ and $deg(v) = 1$. \newline
+
+  Let's start by assuming that $deg(u) = 1$. This means that $u = a_0 + a_1x$
+  where $a_0, a_1 \in \mathbb{F}$. Because $\mathbb{F}$ is a field, and
+  $a_1 \neq 0$ (because if $a_1 = 0$ then $deg(u) = 0$, which would be a
+  contradiction to the statement that $deg(u) = 1$)
+  then there
+  exists a multiplicative inverse for $a_1$ in $\mathbb{F}$, namely
+  $a_1^{-1}$, such that $u(-a_0a_1^{-1}) = a_0 + a_1(-a_0a_1^{-1}) = a_0 + (-a_0) = 0$
+  therefore $f$ has the root $-a_0a_1^{-1} \in \mathbb{F}$, and because $f$ is
+  reducible, we have therefore proven our contrapositive claim, which therefore
+  proves that the original problem statement is also true.
 \end{proof}
 
 \textbf{Exercise}:
