@@ -1,0 +1,74 @@
+\newlength\mystoreparindent
+\newenvironment{myparindent}[1]{%
+\setlength{\mystoreparindent}{\the\parindent}
+\setlength{\parindent}{#1}
+}{%
+\setlength{\parindent}{\mystoreparindent}
+}
+
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+  #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\begin{document}
+
+\begin{myparindent}{0pt}
+
+Kyle Kloberdanz \newline
+21 February 2022 \newline
+
+\textbf{Exercise 2.3.3}:
+Let $f = x^5 + 2x^4 + 2x^3 + x^2 - 2x - 2$ and $g = 4x^4 + 16$. Find $gcd(f, g)$
+and express it as $uf + vg$
+\newline
+
+\textbf{Exercise 2.3.5}:
+Prove that a polynomial $f \in \mathbb{F}[x]$ of degree 3 is irreducible in
+$\mathbb{F}[x]$ if it does not have a root in $\mathbb{F}$.
+\newline
+\begin{proof}
+\end{proof}
+
+\textbf{Exercise}:
+Come up with a polynomial $g \in \mathbb{Q}[x]$ that has no roots in $\mathbb{Q}$
+but is \textit{not} irreducible.
+\newline
+
+\textbf{Exercise 2.3.6}:
+Consider the polynomial $f(x) = x^3 - x + 2 \in \mathbb{Z}_5[x]$ (more precisely,
+$f(x) = [1]x^3 - [1]x + [2]$). Prove that $f$ is irreducible in $\mathbb{Z}_5$.
+\textit{Hint: Use Exercise 2.3.5}.
+\newline
+\begin{proof}
+\end{proof}
+
+\textbf{Exercise}:
+Consider the polynomial $p(x) = 3x^3 + 2x^2 + 4x + 2 \in \mathbb{Z}_7[x]$
+(more precisely, $f(x) = [3]x^3 + [2]x^2 + [4]x + [2]$). Prove that $f$ is
+\textit{not} irreducible in $\mathbb{Z}_7[x]$.
+\newline
+\begin{proof}
+\end{proof}
+
+\textbf{Exercise 2.5.1}:
+Suppose $T:R^n \rightarrow R^n$ is a linear transformation. Prove that $T$ is
+an isometry if and only if $T(v) \cdot T(w) = v \cdot w$ then $T$ is an isometry,
+make sure you verify that $T$ is a bijection.
+\newline
+\begin{proof}
+\end{proof}
+
+\end{myparindent}
+\end{document}
