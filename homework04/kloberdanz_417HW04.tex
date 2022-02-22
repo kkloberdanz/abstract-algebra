@@ -127,13 +127,14 @@ Consider the polynomial $p(x) = 3x^3 + 2x^2 + 4x + 2 \in \mathbb{Z}_7[x]$
 
 
 \begin{proof}
-  Recall that we have proven in Exercise 2.3.5 that if a polynomial
-  $f \in \mathbb{F}[x]$ of degree 3 does not have a root in $\mathbb{F}$, then
-  $f$ is irreducible if $\mathbb{F}[x]$. \newline
+  Recall Corollary 2.3.16: For every $f \in \mathbb{F}[x]$ and
+  $\alpha \in \mathbb{F}$, there exists a polynomial $q \in \mathbb{F}[x]$
+  so that $f = (x - \alpha)q + f(\alpha)$. In particular, $\alpha$ is a root
+  of $f$ if and only if $(x - \alpha) | f$. \newline
 
-  This means that if a polynomial
-  $f \in \mathbb{F}[x]$ of degree 3 does have a root in $\mathbb{F}$, then
-  $f$ is not irreducible if $\mathbb{F}[x]$. \newline
+  If $\alpha$ is a root of $f$, then by corollary 2.3.16,
+  $f = (x - \alpha)q + 0 = (x - \alpha)q$, and therefore $f$ is reducible if
+  there exits a root for $f$. \newline
 
   We will show that $f$ has a root in $\mathbb{F}$. \newline
 
