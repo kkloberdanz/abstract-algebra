@@ -11,6 +11,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{enumitem}
+\usepackage{graphicx}
 
 \DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
   #1\;\delimsize\|\;#2%
@@ -21,6 +22,8 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
+
+\graphicspath{ {./} }
 
 \begin{document}
 
@@ -33,6 +36,13 @@ Kyle Kloberdanz \newline
 Let $f = x^5 + 2x^4 + 2x^3 - x^2 - 2x - 2$ and $g = 4x^4 + 16$. Find $gcd(f, g)$
 and express it as $uf + vg$
 \newline
+
+I spent too much time trying to show long division in LaTex. I gave up, and
+inserted a scanned image of my notes instead to show the process of calculating
+the GCD using the Euclidean Algorithm below. From those results, we can see that
+the monic form of the $GCD(f, g) = x^2 + 2x + 2$.
+
+\includegraphics{longdivision}
 
 \textbf{Exercise 2.3.5}:
 Prove that a polynomial $f \in \mathbb{F}[x]$ of degree 3 is irreducible in
