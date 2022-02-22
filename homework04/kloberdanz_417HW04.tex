@@ -133,8 +133,6 @@ Consider the polynomial $p(x) = 3x^3 + 2x^2 + 4x + 2 \in \mathbb{Z}_7[x]$
   \begin{verbatim}
 sage: x = PolynomialRing(RationalField(), 'x').gen()
 sage: f = (3*x^3 + 2*x^2 + 4*x + 2)
-sage: f.factor()
-(3) * (x^3 + 2/3*x^2 + 4/3*x + 2/3)
 sage: f.factor_mod(7)
 (3) * (x + 5) * (x^2 + 5*x + 2)
   \end{verbatim}
