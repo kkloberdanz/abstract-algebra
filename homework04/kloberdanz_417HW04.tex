@@ -45,7 +45,8 @@ $\mathbb{F}[x]$ if it does not have a root in $\mathbb{F}$.
 
   We will demonstrate a proof by contrapositive where we will show that a
   polynomial $f \in \mathbb{F}[x]$ of degree 3 has
-  a root in $\mathbb{F}$ if $f$ is not irreducible (i.e., $f$ is reducible)
+  a root in $\mathbb{F}$ if $f$ is not irreducible (i.e., $f$ is reducible) in
+  $\mathbb{F}[x]$
   \newline
 
   Because we are assuming that $f$ is reducible, then we can write $f = uv$
@@ -63,14 +64,31 @@ $\mathbb{F}[x]$ if it does not have a root in $\mathbb{F}$.
   therefore $f$ has the root $-a_0a_1^{-1} \in \mathbb{F}$. \newline
 
   Since we have shown that a polynomial $f \in \mathbb{F}[x]$ of degree 3 has a
-  root in $\mathbb{F}$ if $f$ is reducible, by the contrapositive we see that
-  a polynomial $f \in \mathbb{F}[x]$ of degree 3 is irreducible in
-  $\mathbb{F}[x]$ if it does not have a root in $\mathbb{F}$.
+  root in $\mathbb{F}$ if $f$ is reducible in $\mathbb{F}[x]$, by the
+  contrapositive we see that a polynomial $f \in \mathbb{F}[x]$ of degree 3 is
+  irreducible in $\mathbb{F}[x]$ if it does not have a root in $\mathbb{F}$.
 \end{proof}
 
 \textbf{Exercise}:
 Come up with a polynomial $g \in \mathbb{Q}[x]$ that has no roots in $\mathbb{Q}$
-but is \textit{not} irreducible.
+but is \textit{not} irreducible. \newline
+
+let $g = x^4 + 2x^2 + 1 = (x^2 + 1)(x^2 + 1)$ \newline
+
+We can see that $g$ is not irreducible. \newline
+
+To avoid having to apply the quartic equation, by factoring this polynomial, we
+see that all of the roots will be $x$ such that $x^2 + 1 = 0$. Hence we can
+apply the quadratic equation to find the roots like so.
+
+\[
+  \frac{-0 \pm \sqrt{0^2 - 4(1)(1)}}{2(1)} = \frac{\pm \sqrt(-4)}{2} =
+  \frac{\pm 2 \sqrt{-1}}{2} = \pm \sqrt{-1} = \pm i \notin \mathbb{Q}
+\]
+
+Hence, we see that the roots to $g = x^4 + 2x^2 + 1$ are $i$ and $-i$, which
+do not exist in $Q$, and is therefore an example of a polynomial
+$g \in \mathbb{Q}[x]$ that has no roots in $\mathbb{Q}$ but is not irreducible.
 \newline
 
 \textbf{Exercise 2.3.6}:
@@ -79,6 +97,27 @@ $f(x) = [1]x^3 - [1]x + [2]$). Prove that $f$ is irreducible in $\mathbb{Z}_5$.
 \textit{Hint: Use Exercise 2.3.5}.
 \newline
 \begin{proof}
+  Recall that we have proven in Exercise 2.3.5 that if a polynomial
+  $f \in \mathbb{F}[x]$ of degree 3 does not have a root in $\mathbb{F}$, then
+  $f$ is irreducible if $\mathbb{F}[x]$. \newline
+
+  We will therefore show that $f \in \mathbb{Z}_5[x]$ does not have a root in
+  $\mathbb{Z}_5$, and is therefore irreducible. \newline
+
+  Because $\mathbb{Z}_5$ is the finite set $\{0, 1, 2, 3, 4\}$, we can show
+  that given any $x \in \mathbb{Z}_5$, $x^3 - x + 2 \neq 0$ as follows.
+  \newline
+
+  $f(0) = 2 \neq 0$ \newline
+  $f(1) = 1 - 1 + 2 = 2 \neq 0$ \newline
+  $f(2) = 2^3 - 2 + 2 = 8 - 2 + 2 = 8 \pmod{5} = 3 \neq 0$ \newline
+  $f(3) = 3^3 - 3 + 2 = 8 - 2 + 2 = 27 - 3 + 2 = 26 \pmod{5} = 1 \neq 0$ \newline
+  $f(4) = 4^3 - 4 + 2 = 64 - 4 + 2 = 62 \pmod{5} = 2 \neq 0$ \newline
+
+  We have exhausted every possible value for $x \in \mathbb{Z}_5$, and found
+  that no such value for $x$ is a root for $f$, i.e., where $f(x) = 0$, hence
+  there does not exist a root for $f$ in $\mathbb{Z}_5$, therefore by Exercise
+  2.3.5, we conclude that $f$ is irreducible in $\mathbb{Z}_5$.
 \end{proof}
 
 \textbf{Exercise}:
