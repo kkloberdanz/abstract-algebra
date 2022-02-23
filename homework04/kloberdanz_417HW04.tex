@@ -173,11 +173,65 @@ Suppose $T:R^n \rightarrow R^n$ is a linear transformation. Prove that $T$ is
 an isometry if and only if $T(v) \cdot T(w) = v \cdot w$. Recall that an
 isometry is a \textit{bijection} that preserves distance.
 
-\textit{Note}: when
-proving that if $T(v) \cdot T{w} = v \cdot w$ then $T$ is an isometry,
-make sure you verify that $T$ is a bijection.
+\textit{Note}: when proving that if $T(v) \cdot T(w) = v \cdot w$ then $T$ is
+an isometry, make sure you verify that $T$ is a bijection.
 \newline
 \begin{proof}
+  Given the definition of an isometry, We must show that
+  \[
+    |T(v) - T(w)| = |v - w| \iff T(v) \cdot T(w) = v \cdot w
+  \]
+
+  First we will show that $T$ is injective by contradiction. Let's assume that
+  there is some $a_1, a_2 \in \mathbb{R}^n$ such that $a_1 \neq a_2$ and
+  $T(a_1)$ = $T(a_2)$. Therefore we can write:
+  \[ a_1 \cdot a_2 = T(a_1) \cdot T(a_2) = T(a_1) \cdot T(a_1) = a_1 \cdot a_1 \]
+  Which would imply that $a_1 = a_2$, a contradiction. \newline
+
+  We will also demonstrate that $T$ is surjective by contradiction. Let's assume
+  that $a \in \mathbb{R}$ such that $a \neq x \cdot y$ where
+  $x, y \in \mathbb{R}^n$ We could write $a$ as the sum of products of some numbers
+  $x_1y_1 + x_2y_2 + ... + x_ny_n$ where $n \in \mathbb{Z}, n > 0$,
+  $x_1, .., x_n \in \mathbb{R}$, and $y_1, .., y_n \in \mathbb{R}$.
+  But then $a = x_1y_1 + x_2y_2 + ... + x_ny_n = x \cdot y = T(x) \cdot T(y)$
+  which contradicts that $a \neq x \cdot y$, and therefore $T(x)$ and $T(y)$
+  are surjective. \newline
+
+  By showing that $T$ is both injective and surjective, we have therefore shown
+  that $T$ is bijective. \newline
+
+  (i) To demonstrate what happens if $v = w$
+  \[ T(v) \cdot T(v) = v \cdot v = |v| \]
+
+  The norm for some vector $x \in \mathbb{R}^n$ is $|x| = \sqrt{x \cdot x}$.
+  We can replace the norm in this equation with this definition.
+  \[ |T(v) - T(w)| = |v - w| \]
+  \[ \sqrt{(T(v) - T(w)) \cdot (T(v) - T(w))} = \sqrt{(v - w) \cdot (v - w)} \]
+
+  Squaring both sides we find
+  \[ (T(v) - T(w)) \cdot (T(v) - T(w)) = (v - w) \cdot (v - w) \]
+  \[ T(v) \cdot T(v) - 2(T(v) \cdot T(w)) + T(w) \cdot T(w) = v \cdot v - 2(v \cdot w) + w \cdot w \]
+
+  By (i), we can show:
+  \[ v \cdot v - 2(T(v) \cdot T(w)) + w \cdot w = v \cdot v - 2(v \cdot w) + w \cdot w \]
+  \[ |v| - 2(T(v) \cdot T(w)) + |w| = |v| - 2(v \cdot w) + |w| \]
+
+  By subtraction of $|v|$ and $|w|$
+  \[ - 2(T(v) \cdot T(w)) = - 2(v \cdot w) \]
+
+  By division of $-2$
+  \[ T(v) \cdot T(w) = v \cdot w \]
+
+  By algebraic manipulation we can see that
+  \[ |T(v) - T(w)| = |v - w| \implies T(v) \cdot T(w) = v \cdot w \]
+
+  By performing this same procedure in reverse, we can see that
+  \[ T(v) \cdot T(w) = v \cdot w \implies |T(v) - T(w)| = |v - w| \]
+
+  Therefore:
+  \[ |T(v) - T(w)| = |v - w| \iff T(v) \cdot T(w) = v \cdot w \]
+
+
 \end{proof}
 
 \end{myparindent}
