@@ -68,7 +68,6 @@ making it into a group. \newline
   Therefore, because we have satisfied i, ii, iii, we know that $H$ is a group
   with the operator $*$ restricted on it.
   \newline
-
 \end{proof}
 
 \textbf{Exercise 2.6.4}:
@@ -91,10 +90,31 @@ $S, T \in \mathbb{L}(\mathbb{F}^2, \mathbb{F}^2)$ such that $ST \neq TS$.
 
 \textbf{Exercise 3.1.1}:
 Prove part (ii) of Proposition 3.1.1: \newline
+
+Note: for brevity, I'll omit $*$, and instead show $g * h$ as $gh$.
+
 (i) If $g, h \in G$ and either $g * h = h$ or $h * g = h$, then $g = e$.
+\begin{proof}
+  \[ g^{-1}gh = g^{-1}h \]
+  \[ eh = g^{-1}h \]
+  \[ ehh^{-1} = g^{-1}hh^{-1} \]
+  \[ e = g^{-1} \]
+  \[ ge = gg^{-1} \]
+  \[ g = e \]
+\end{proof}
 
 (ii) If $g, h \in G$ and $g * h = e$ then $g = h^{-1}$ and $h = g^{-1}$
-\newline
+\begin{proof}
+  \[ g^{-1}gh = g^{-1}e \]
+  \[ h = g^{-1}e \]
+  \[ h = g^{-1} \]
+
+  Also
+
+  \[ ghh^{-1} = eh^{-1} \]
+  \[ g = eh^{-1} \]
+  \[ g = h^{-1} \]
+\end{proof}
 
 \textbf{Exercise 3.1.3}:
 Suppose that $G$ is a nonempty set with an associative operation $*$ such that
