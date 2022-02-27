@@ -45,7 +45,7 @@ making it into a group. \newline
 
   (ii) there is an identity $e \in G$
 
-  (iii) there exists an inverse $g{-1} \in G$
+  (iii) there exists an inverse $g^{-1} \in G$
   \newline
 
   Because were know that $H$ is a subgroup of $G$, we know by the definition Of
@@ -55,7 +55,7 @@ making it into a group. \newline
   We also know from the definition of a subgroup, that for all $g, h \in H$ that
   $g * h \in H$. Because of this, and also from the definition that for every
   $h \in H$, that $h^{-1} \in H$, then if $h = g^{-1}$, then
-  $g * h = g * g{-1} = e$. Also, if $g = h^{-1}$ then $g * h = h^{-1} * h = e$.
+  $g * h = g * g^{-1} = e$. Also, if $g = h^{-1}$ then $g * h = h^{-1} * h = e$.
   We can see that there exists an identity $e \in H$, satisfying (ii) \newline
 
   From the definition of a subgroup, we can see that for $f, g, h \in H$ that
@@ -76,9 +76,16 @@ of the group $S^1$ from Example 2.6.12. \newline
 
 \textbf{Exercise 2.6.9}:
 Suppose $R$  is a ring and $X$ is a nonempty set. Complete the proof that $R^X$
-forms a ring by proving (a) that the pointwise addition on $R^X$ is commutative,
-(b) 0 is an additive identity, (c) $-f$ is the additive inverse of any
-$f \in R^X$ (and so $(R^X, +)$ is an abelian group), and (d) multiplication
+forms a ring by proving
+
+(a) that the pointwise addition on $R^X$ is commutative,
+
+(b) 0 is an additive identity,
+
+(c) $-f$ is the additive inverse of any
+$f \in R^X$ (and so $(R^X, +)$ is an abelian group), and
+
+(d) multiplication
 distributes over addition. If $R$ is a commutative ring, prove that $R^X$ is a
 commutative ring. If $R$ has $1$, prove that the function $1(x) = 1$ is a $1$
 for $R^X$. \newline
@@ -147,11 +154,17 @@ left identity is also a right identity. \newline
   Second, we will show that $e = g^{-1}g = gg^{-1}$
   \[ e = g^{-1}g = eg^{-1}g = (({g^{-1}})^{-1}g^{-1}) (g^{-1}g) = (({g^{-1}})^{-1}g) e = gg^{-1}e \]
   Because $e = gg^{-1}e$, and we know that $e$ is a left identity, then the only
-  way for $e = gg^{-1}e$, is if $gg^{-1} = e$, which yields $e = ee$, hence $gg^{-1} = g^{-1}g$,
+  way for $e = gg^{-1}e$, is if $gg^{-1} = e$, which yields $e = ee$ (left identity for $e$), hence $gg^{-1} = g^{-1}g$,
   a right inverse. \newline
 
-  Finally, we will find the right identity. Because $g^{-1}g = gg^{-1}$,
-  \[ eg = (gg^{-1})g = g(g^{-1}g) = ge \]
+  Third, we will find the right identity. Because $g^{-1}g = gg^{-1}$,
+  \[ g = eg = (gg^{-1})g = g(g^{-1}g) = ge = g \]
+
+  Finally, because we know that $*$ is associative (given by the problem
+  statement), and there exists an identity $e \in G$ such that
+  $e * g = g * e = g$ for all $g \in G$, and for all $g \in G$, there exists
+  an inverse $g^{-1} \in G$, such that $g * g^{-1} = g^{-1} * g = e$, we know
+  that $G$ is indeed a group.
 \end{proof}
 
 \end{myparindent}
