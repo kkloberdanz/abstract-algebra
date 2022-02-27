@@ -134,6 +134,15 @@ Suppose $\mathbb{F}$ is any field. Find a pair of linear transformations
 $S, T \in \mathcal{L}(\mathbb{F}^2, \mathbb{F}^2)$ such that $ST \neq TS$.
 \newline
 
+Suppose $S(x, y) = (x + y, x + y)$ and $T(x, y) = (x + y, x + (-y))$
+where $x, y \in \mathbb{Q}$
+
+\[ ST(4, 5) = S(T(4, 5)) = S(4 + 5, 4 - 5) = S(9, -1) = (8, 8) \]
+\[ TS(4, 5) = T(S(4, 5)) = T(9, 9) = (18, 0) \]
+Therefore:
+\[ ST(4, 5) = (8, 8) \neq TS(4, 5) = (18, 0) \]
+\[ ST(4, 5) \neq TS(4, 5) \]
+
 \textbf{Exercise 3.1.1}:
 Prove part (ii) of Proposition 3.1.1: \newline
 
@@ -141,12 +150,17 @@ Note: for brevity, I'll omit $*$, and instead show $g * h$ as $gh$.
 
 (i) If $g, h \in G$ and either $g * h = h$ or $h * g = h$, then $g = e$.
 \begin{proof}
-  \[ g^{-1}gh = g^{-1}h \]
-  \[ eh = g^{-1}h \]
-  \[ ehh^{-1} = g^{-1}hh^{-1} \]
-  \[ e = g^{-1} \]
-  \[ ge = gg^{-1} \]
+  \[ gh = h \]
+  \[ ghh^{-1} = hh^{-1} \]
+  \[ ge = e \]
   \[ g = e \]
+
+  Also:
+  \[ hg = h \]
+  \[ h^{-1}hg = h^{-1}h \]
+  \[ eg = e \]
+  \[ g = e \]
+
 \end{proof}
 
 (ii) If $g, h \in G$ and $g * h = e$ then $g = h^{-1}$ and $h = g^{-1}$
