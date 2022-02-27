@@ -80,7 +80,7 @@ forms a ring by proving (a) that the pointwise addition on $R^X$ is commutative,
 (b) 0 is an additive identity, (c) $-f$ is the additive inverse of any
 $f \in R^X$ (and so $(R^X, +)$ is an abelian group), and (d) multiplication
 distributes over addition. If $R$ is a commutative ring, prove that $R^X$ is a
-commutative ring. If $R has 1$, prove that the function $1(x) = 1$ is a $1$
+commutative ring. If $R$ has $1$, prove that the function $1(x) = 1$ is a $1$
 for $R^X$. \newline
 
 \textbf{Exercise 2.6.11}:
@@ -105,12 +105,14 @@ Note: for brevity, I'll omit $*$, and instead show $g * h$ as $gh$.
 
 (ii) If $g, h \in G$ and $g * h = e$ then $g = h^{-1}$ and $h = g^{-1}$
 \begin{proof}
+  \[ gh = e \]
   \[ g^{-1}gh = g^{-1}e \]
   \[ h = g^{-1}e \]
   \[ h = g^{-1} \]
 
-  Also
+  At the same time:
 
+  \[ gh = e \]
   \[ ghh^{-1} = eh^{-1} \]
   \[ g = eh^{-1} \]
   \[ g = h^{-1} \]
@@ -132,7 +134,25 @@ Of course, we could have replaced “left” with “right” and there is an an
 definition of a group. Hint: Start by proving that if $g \in G$ and
 $g * g = g$, then $g = e$. Then prove that $g * g^{-1} = e$ (that is, the left
 inverse is also a right inverse for the left identity). Finally, prove that the
-left identity is also a right identity.
+left identity is also a right identity. \newline
+
+\begin{proof}
+  First, we will show that for $g \in G$, if $g * g = g$, then $g = e$. For
+  brevity, I will omit the $*$.
+  \[ gg = g \]
+  \[ g^{-1}gg = g^{-1} g \]
+  \[ eg = e \]
+  \[ g = e \]
+
+  Second, we will show that $e = g^{-1}g = gg^{-1}$
+  \[ e = g^{-1}g = eg^{-1}g = (({g^{-1}})^{-1}g^{-1}) (g^{-1}g) = (({g^{-1}})^{-1}g) e = gg^{-1}e \]
+  Because $e = gg^{-1}e$, and we know that $e$ is a left identity, then the only
+  way for $e = gg^{-1}e$, is if $gg^{-1} = e$, which yields $e = ee$, hence $gg^{-1} = g^{-1}g$,
+  a right inverse. \newline
+
+  Finally, we will find the right identity. Because $g^{-1}g = gg^{-1}$,
+  \[ eg = (gg^{-1})g = g(g^{-1}g) = ge \]
+\end{proof}
 
 \end{myparindent}
 \end{document}
