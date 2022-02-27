@@ -81,16 +81,45 @@ Suppose $R$  is a ring and $X$ is a nonempty set. Complete the proof that $R^X$
 forms a ring by proving
 
 (a) that the pointwise addition on $R^X$ is commutative,
+\begin{proof}
+  Recall, pointwise addition states $(f + g)(x) = f(x) + g(x)$ where $f, g \in R^X$
+  Because for a ring $R$, $(R, +)$ forms an abelian group, and therefore addition
+  is commutative. Because of this, we see that:
+  \[ (f + g)(x) = f(x) + g(x) = g(x) + f(x) = (g + f)(x) \]
+  Therefore pointwise addition on $R^X$ is commutative.
+\end{proof}
 
 (b) 0 is an additive identity,
+\begin{proof}
+  \[ (0 + f)(x) = 0x + f(x) = f(x) = f(x) + 0x = (f + 0)(x) \]
+  Therefore, $0$ is an additive identity.
+\end{proof}
 
 (c) $-f$ is the additive inverse of any
-$f \in R^X$ (and so $(R^X, +)$ is an abelian group), and
+$f \in R^X$ (and so $(R^X, +)$ is an abelian group)
+\begin{proof}
+  \[ (-f + f)(x) = -f(x) + f(x) = 0 = f(x) + (-f(x)) = (f + (-f))(x) \]
+  Therefore, $-f$ is the additive inverse of any $f \in R^X$
+\end{proof}
 
 (d) multiplication
 distributes over addition. If $R$ is a commutative ring, prove that $R^X$ is a
 commutative ring. If $R$ has $1$, prove that the function $1(x) = 1$ is a $1$
 for $R^X$. \newline
+\begin{proof}
+  Recall, pointwise multiplication states $(fg)(x) = f(x)g(x)$, where $f, g \in R^X$.
+  \newline
+
+  Let $a, b, c \in R^X$
+  \[ (a + b)(x) = a(x) + b(x) \]
+  \[ c(a + b)(x) = c(x) (a(x) + b(x)) \]
+  \[ c(a + b)(x) = (c(x) a(x)) + (c(x) b(x)) \]
+  \[ c(a + b)(x) = (c(x) a(x)) + (c(x) b(x)) \]
+  \[ c(a + b)(x) = (ca)(x) + (cb)(x) \]
+  \[ c(a + b)(x) = ((ca) + (cb))(x) \]
+
+  Therefore, multiplication distributes over addition.
+\end{proof}
 
 \textbf{Exercise 2.6.11}:
 Suppose $\mathbb{F}$ is any field. Find a pair of linear transformations
