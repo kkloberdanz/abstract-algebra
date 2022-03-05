@@ -32,7 +32,7 @@
 \begin{myparindent}{0pt}
 
 Kyle Kloberdanz \newline
-27 February 2022 \newline
+5 March 2022 \newline
 
 \textbf{Exercise 2.6.3}:
 Prove Proposition 2.6.8: If $(G, *)$ is a group, and $H \subset G$ is a
@@ -75,6 +75,51 @@ making it into a group. \newline
 \textbf{Exercise 2.6.4}:
 Prove that the roots of unity $C_n$, defined in Example 2.3.18 form a subgroup
 of the group $S^1$ from Example 2.6.12. \newline
+\begin{proof}
+  Recall:
+  \[ C_n = \{ e^{2 \pi ki / n} | k \in \{ 0, ..., n - 1 \} \} \]
+  Where $k, n \in \mathbb{Z}$
+  \[ S^1 = \{ e^{i \theta} | \theta \in \mathbb{R} \} \]
+  Where $S^1 < \mathbb{C}^{\times}$ with multiplication. \newline
+
+  We must demonstrate that $C_n < S^1$. \newline
+
+  We must first show that for the set $C_n$ that $C_n \subset S^1$.
+  We notice that $2 \pi k/n \in \mathbb{R}$. Hence $\{ 2 \pi k/n | k \in \{ 0, ..., n - 1 \} \} \subset \mathbb{R}$.
+  Hence $\{ 2 \pi k/n | k \in \{ 0, ..., n - 1 \} \}$ is a subset of all possible values of $\theta$.
+  Therefore we can see that $C_n \subset S^1$. \newline
+
+  Next, we must show that for all $x, y \in C_n$, that $xy \in C_n$.
+  Let $k, l \in \{ 0, ..., n - 1 \}$ such that $x = e^{2 \pi ik/n}$ and
+  $y = e^{2 \pi il/n}$
+  \[ xy = e^{2 \pi ik/n}  e^{2 \pi il/n} = e^{(2 \pi ik/n) + (2 \pi il/n)} = e^{(2\pi i/n)(k + l)} = e^{2\pi i (k + l) / n} \]
+
+  Rewritten using Euler's Formula:
+  \[ e^{2\pi i (k + l) / n} = cos(2\pi (k + l) / n) + i\ sin(2\pi (k + l) / n) \]
+
+  Recall if $k \equiv l \pmod{n}$, then $cos(2 \pi k/n) = cos(2 \pi l/n)$ and
+  $sin(2 \pi k/n) = sin(2 \pi l/n)$ \newline
+
+  Given this property of sin and cos with respect to multiples of $2 \pi$, we
+  can see that $k$ and $l$ form an equivalency class $\pmod n$, and by
+  equivalency class addition, $[k] + [l] = [k + l]$,
+  hence for any $x, y \in C_n$, $xy \in C_n$. \newline
+
+  We must now show that for all $x \in C_n$, $x^{-1} \in C_n$.
+  Let $x = e^{2 \pi k i / n}$, hence $x^{-1} = e^{-2 \pi k i / n}$.
+  We must show that $xx^{-1} = x^{-1}x = 1$.
+
+  \[ xx^{-1} = e^{2 \pi k i / n} e^{-2 \pi k i / n} = \frac{e^{2 \pi k i / n}}{e^{2 \pi k i / n}} = 1 \]
+  \[ x^{-1}x = e^{-2 \pi k i / n} e^{2 \pi k i / n} = \frac{e^{2 \pi k i / n}}{e^{2 \pi k i / n}} = 1 \]
+
+  Hence for all $x \in C_n$, we have shown that there exists the inverse $x^{-1}$
+  such that $xx^{-1} = x^{-1}x = 1$. \newline
+
+  Therefore, because we have shown that $C_n < S^1$, for all $x, y \in C_n$,
+  that $xy \in C_n$, and for all $x \in C_n$, $x^{-1} \in C_n$, we conclude
+  that $C_n < S^1$. In other words, $C_n$ is a subgroup of $S^1$
+
+\end{proof}
 
 \textbf{Exercise 2.6.9}:
 Suppose $R$  is a ring and $X$ is a nonempty set. Complete the proof that $R^X$
