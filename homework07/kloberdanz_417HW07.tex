@@ -117,8 +117,26 @@ congruence classes). \textit{Hint: Theorem 1.5.8 and the discussion there}.
 
 \textbf{Exercise 3.3.13}:
 An \textbf{ideal} (or sometimes called a \textbf{two-sided ideal}) is a
-substring $\mathcal{J}$
+subring $\mathcal{J} \subset R$ with the property that for all
+$r \in R$ and $a \in \mathcal{J}$, we have $ar, ra \in \mathcal{J}$.
+Prove that the kernel of a ring homomorphism $\phi: R \rightarrow S$ is an ideal.
 \newline
+
+\begin{proof}
+  Recall, a kernel of $\phi$ is defined as:
+  \[ ker(\phi) = \{ g \in G | \phi(g) = e \} \]
+
+  Hence, the kernel of $\phi$ is:
+  \[ ker(\phi) = \{ r \in R | \phi(r) = 0 \} \]
+
+  Let $r \in R$ and $a \in ker(\phi)$. We can see that $\phi(a) = 0$
+
+  \[ \phi(r \times a) = \phi(r) \times \phi(a) = \phi(r) \times 0 = 0 \]
+  \[ \phi(a \times r) = \phi(a) \times \phi(r) = 0 \times \phi(r) = 0 \]
+
+  Because $\mathcal{J}$ is a ring, $0 \in \mathcal{J}$, hence $ar, ra \in \mathcal{J}$,
+  therefore $\phi: R \rightarrow S$ is an ideal.
+\end{proof}
 
 \textbf{Exercise 3.3.16}:
 Let $\phi: \mathbb{Z} \rightarrow \mathbb{Z}$ be given by $\phi(k) = 2k$. Prove
