@@ -117,13 +117,65 @@ congruence classes). \textit{Hint: Theorem 1.5.8 and the discussion there}.
 
 \textbf{Exercise 3.3.13}:
 An \textbf{ideal} (or sometimes called a \textbf{two-sided ideal}) is a
-substring TODO
+substring $\mathcal{J}$
 \newline
 
 \textbf{Exercise 3.3.16}:
 Let $\phi: \mathbb{Z} \rightarrow \mathbb{Z}$ be given by $\phi(k) = 2k$. Prove
 that although $\phi$ is a homomorphism of additive groups, it is \textit{not}
 a ring homomorphism.
+
+\begin{proof}
+  First, we will demonstrate that $\phi$ is indeed a group homomorphism. \newline
+
+  Let $x, y \in \mathbb{Z}$ and let $k = a + b$
+  \[ \phi(k) = \phi(a + b) = \phi(a) + \phi(b) = 2 \times a + 2 \times b =
+  2(a + b) = 2k
+  \]
+
+  We can see that $\phi$ is indeed a group homomorphism. \newline
+
+  Recall, a ring homomorphism requires that both addition and multiplication
+  are preserved. \newline
+
+  We will demonstrate a counter example in which addition is preserved, but
+  multiplication is not. Given that integers form a group under addition,
+  and as we have shown above, $\phi: \mathbb{Z} \rightarrow \mathbb{Z}$ is a
+  group homomorphism, we know that addition will be preserved. \newline
+
+  Let $k = 10$.
+  \[ \phi(10) = 2 \times 10 = 20 \]
+  \[ \phi(10) = \phi(2 + 8) = \phi(2) + \phi(8) = 2 \times 2 + 2 \times 8 = 4 + 16 = 20 \]
+
+  So far so good. While this doesn't prove anything in itself, we have now seen an
+  example of $\phi$ preserving addition. \newline
+
+  Now let's try multiplication.
+  \[ \phi(10) = 2 \times 10 = 20 \]
+
+  Let's see what happens when we substitute $10$ for $2 \times 5$ and assume that
+  $\phi$ will form a homomorphism under multiplication.
+
+  \[ 10 = 2 \times 5 \]
+  \[ \phi(2 \times 5) = \phi(2) \times \phi(5) = 2 \times 2 \times 2 \times 5 = 40 \]
+  \[ 20 \neq 40 \]
+
+  Because the homomorphism is not preserved under multiplication, this therefore
+  demonstrates a counterexample that $\phi$ is not a ring homomorphism.
+
+  A more general way to demonstrate this is as follows, assume that $\phi$
+  forms a homomorphism under multiplication. \newline
+
+  Let $x, y \in \mathbb{Z}$ and $k = x \times y$.
+
+  \[ \phi(k) = \phi(x \times y) = \phi(x) \times \phi(y) = 2x \times 2y = 4(x \times y) =
+  2 \times 2(x \times y) = 2 \times 2k \neq 2k \]
+
+  We can see that while $\phi: \mathbb{Z} \rightarrow \mathbb{Z}$ forms a group
+  homomorphism under addition, it does not preserve multiplication, and is
+  therefore not a ring homomorphism.
+
+\end{proof}
 
 \end{myparindent}
 \end{document}
