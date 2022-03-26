@@ -105,6 +105,34 @@ conjugation in $G$ defines and automorphism $c_g: H \rightarrow H$.
 \newline
 
 \begin{proof}
+  First we will show that $gHg^{-1}$ is a subgroup of $G$. Recall that
+  $gHg^{-1} = \{ ghg^{-1} | h \in H \}$. \newline
+
+  Because $H$ is a subgroup of $G$, for all $h_1, h_2 \in H$ and $g_1, g_2 \in G$,
+  $h_1 h_2 \in H$ and $g_1 g_2 \in G$. Because every $h \in H$ is also in $G$ such
+  that $h \in G$, then $gh \in G$ and $hg \in G$, hence every element in $gHg^{-1}$
+  can also be found in $G$, hence $gHg^{-1} \subset G$. \newline
+
+  We must show that for all $x, y \in gHg^{-1}$ that $xy \in gHg^{-1}$.
+  Let $h_1, h_2, h_3 \in H$ such that $h_1 h_2 = h_3$.
+
+  \[ xy = (g h_1 g^{-1})(g h_2 g^{-1}) = g h_1 g^{-1}g h_2 g^{-1} = g h_1 h_2 g^{-1} = g h_3 g^{-1} \in gHg^{-1} \]
+
+  Hence, $xy \in gHg^{-1}$. \newline
+
+  We must also show that the inverse $x^{-1}$ exists such that $x \in gHg^{-1}$
+  and $x^{-1} \in gHg^{-1}$.
+  We know that the identity $e$ must be in $gHg^{-1}$, so we can find $x^{-1}$
+  as follows. \newline
+
+  Let $h \in H$
+
+  \[ (ghg^{-1})(gh^{-1}g^{-1}) = ghh^{-1}g^{-1} = gg^{-1} = e \]
+
+  Hence the inverse $x^{-1}$ exists such that $x \in gHg^{-1}$, and the inverse
+  is $x^{-1} = gh^{-1}g^{-1}$.
+
+  Therefore $gHg^{-1}$ is a subgroup of G.
 \end{proof}
 
 \textbf{Exercise 3.3.8}:
