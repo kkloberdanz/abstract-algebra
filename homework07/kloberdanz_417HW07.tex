@@ -108,6 +108,31 @@ is a subgroup containing $H$, and that $H \triangleleft N(H)$.
 containing H in which H is normal}.
 \newline
 
+\begin{proof}
+  In order to show that $N(H)$ is a subgroup of G, we must show that
+  $N(H) \subset G$. Because $N(H)$ is defined by only elements that are also in
+  $G$, we see that for every $g \in G$ that $g \in N(H)$, thus $N(H) \subset G$
+  \newline
+
+  Next we must show that for every $g \in N(H)$ that $g^{-1} \in N(H)$. This can
+  be seen from the definition of $N(H)$, that it is only constructed from $g$
+  such that $gHg^{-1} = H$, therefore by the definition, for all
+  $g \in N(H)$ $\exists$ $g^{-1} \in N(H)$
+  \newline
+
+  Now we must show that for all $x, y \in N(H)$ that $xy \in N(H)$. Let's
+  start by assuming that $xy$ is indeed in $N(H)$. If the property
+  $x y H (x y)^{-1} = H$ holds, then $xy \in N(H)$
+
+  \[ x y H (x y)^{-1} = xy H y^{-1} x^{-1} = x(y H y^{-1}) x^{-1} = x H x^{-1} = H \]
+
+  Finally, recall Lemma 3.3.12, if $H < N(H)$ then
+  $H \triangleleft N(H) \iff \forall g \in N(H)$, $gHg^{-1} \subset H$.
+  By the definition of $N(H)$, every element $g \in N(H)$ is such that $gHg^{-1} = H$.
+  Because containment allows equality, we can see that $gHg^{-1} \subset H$,
+  therefore by the lemma, $H \triangleleft N(H)$
+\end{proof}
+
 \textbf{Exercise 3.3.10}:
 Prove that if $gcd(n, m) = 1$, then
 $\mathbb{Z}_{nm} \cong \mathbb{Z}_n \times \mathbb{Z}_m$
