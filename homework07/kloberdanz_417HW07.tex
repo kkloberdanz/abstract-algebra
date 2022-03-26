@@ -104,6 +104,9 @@ $c_g: H \rightarrow gHg^{-1}$. In particular, if $H \triangleleft G$, then
 conjugation in $G$ defines and automorphism $c_g: H \rightarrow H$.
 \newline
 
+\begin{proof}
+\end{proof}
+
 \textbf{Exercise 3.3.8}:
 Let $G$ be a group and $H < G$ a subgroup. Prove that the set
 
@@ -148,6 +151,33 @@ $\mathbb{Z}_{nm} \cong \mathbb{Z}_n \times \mathbb{Z}_m$
 (recall that in $\mathbb{Z}_n^\times$, the operation is multiplication of
 congruence classes). \textit{Hint: Theorem 1.5.8 and the discussion there}.
 \newline
+
+\begin{proof}
+  In order to demonstrate that $\mathbb{Z}_{nm} \cong \mathbb{Z}_n \times \mathbb{Z}_m$,
+  we must show that there exists a $\phi: \mathbb{Z}_{nm} \rightarrow \mathbb{Z}_n \times \mathbb{Z}_m$
+  such that $\phi$ is a bijection and $\phi(xy) = \phi(x) \phi(y)$ where $x, y \in \mathbb{Z}_{nm}$ \newline
+
+  Recall the Chinese Remainder Theorem which states that if $a = cb$ and $cb$
+  are relatively prime then the function $F: \mathbb{Z}_a = \mathbb{Z}_b \times \mathbb{Z}_c$
+  is a bijection. \newline
+
+  By the problem statement $m$ and $n$ are relatively prime. Let $\phi = F$, $m = c$, $n = b$,
+  hence $mn = a$, hence we can apply the Chinese Remainder Theorem, therefore $\phi$
+  is bijective. \newline
+
+  Next, we must demonstrate that $\phi$ is a homomorphism. Recall, the group
+  operator for $\mathbb{Z}_k$ where $k \in \mathbb{Z}$ is addition. \newline
+
+  By the direct product rule on groups (Proposition 3.1.7 and example 3.1.6), we
+  can see that
+
+  \[ \phi(x) \phi(y) = (([x]_n, [x]_m), ([y]_n, [y]_m)) = (([x]_n + [y]_n), ([x]_m + [y]_m)) = ([x + y]_n, [x + y]_m) = \phi(x + y). \]
+
+  Hence $\phi$ is indeed a homomorphism. \newline
+
+  We have shown that $\phi$ is a homomorphism and $\phi$ is also a bijection,
+  hence $\phi$ is isomorphic and therfore $\mathbb{Z}_{nm} \cong \mathbb{Z}_n \times \mathbb{Z}_m$
+\end{proof}
 
 \textbf{Exercise 3.3.13}:
 An \textbf{ideal} (or sometimes called a \textbf{two-sided ideal}) is a
