@@ -101,7 +101,7 @@ Therefore, if $G$ is an abelian group, then every subgroup of $G$ is normal.
 Prove that for any subgroup $H < G$ and element $g \in G$, $gHg^{-1}$ is also
 a subgroup of $G$, and that $c_g(h) = ghg^{-1}$ defines an isomorphism
 $c_g: H \rightarrow gHg^{-1}$. In particular, if $H \triangleleft G$, then
-conjugation in $G$ defines and automorphism $c_g: H \rightarrow H$.
+conjugation in $G$ defines an automorphism $c_g: H \rightarrow H$.
 \newline
 
 \begin{proof}
@@ -132,7 +132,39 @@ conjugation in $G$ defines and automorphism $c_g: H \rightarrow H$.
   Hence the inverse $x^{-1}$ exists such that $x \in gHg^{-1}$, and the inverse
   is $x^{-1} = gh^{-1}g^{-1}$.
 
-  Therefore $gHg^{-1}$ is a subgroup of G.
+  Therefore $gHg^{-1}$ is a subgroup of G. \newline
+
+  Next, we will show that $c_g(h) = ghg^{-1}$ defines an isomorphism $c_g: H \rightarrow gHg^{-1}$. \newline
+
+  We will first show that $c_g$ is a homomorphism.
+
+  \[ c_g(h_1) c_g(h_2) = (g h_1 g^{-1})(g h_2 g^{-1}) = g h_1 h_2 g^{-1} = c_g(h_1 h_2) \]
+
+  where $h_1, h_2 \in H$. \newline
+
+  Next we will show that $\phi$ is a bijection.
+
+  For injectivity, $c_g(h_1) = c_g(h_2)$ implies that $gh_1g^{-1} = gh_2g^{-1}$.
+  Hence:
+
+  \[ g^{-1}gh_1g^{-1} = g^{-1}gh_2g^{-1} \]
+  \[ h_1g^{-1} = h_2g^{-1} \]
+  \[ h_1g^{-1}g = h_2g^{-1}g \]
+  \[ h_1 = h_2 \]
+
+  Thus $c_g$ is injective. \newline
+
+  Next we must demonstrate surjectivity. Because $gHg^{-1} = \{ ghg^{-1} | h \in H \}$,
+  we can see that for every $h \in H$ that $c_g(h)$ is represented in $\{ ghg^{-1} | h \in H \}$,
+  and hence in $gHg^{-1}$, so therefore $c_g$ is surjective. \newline
+
+  Because $c_g$ is both surjective and injective, it is bijective. Because $c_g$
+  is a bijective homomorphism, it is therefore an isomorphism. \newline
+
+  By the definition of a normal subgroup, for $g \in G$, $gHg^{-1} = H \iff H \triangleleft G$,
+  therefore, if $H \triangleleft G$ then $H = gHg^{-1}$ thus
+  $c_g: H \rightarrow gHg^{-1} = c_g: H \rightarrow H$ which is an automorphism.
+
 \end{proof}
 
 \textbf{Exercise 3.3.8}:
