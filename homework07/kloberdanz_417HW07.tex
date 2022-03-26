@@ -62,12 +62,21 @@ But we have just seen that $\phi(g^2) = \phi(g)^2$, so
 
 \[ \phi(g) \phi(g^2) = \phi(g) \phi(g)^2 = \phi(g) \phi(g) \phi(g) = \phi(g)^3 \]
 
-By continuing this for any $n \in \mathbb{Z}$
-\newline
+By continuing this for any $n \in \mathbb{Z_{+}}$
 
 $\phi(g^n) = \phi(g^{n - 1}g) = \phi(g^{n - 1}) \phi(g) = \phi(g^{n - 2}g) \phi(g) =$
 
 $\phi(g^{n-2}) \phi(g) \phi(g) = \phi(g) ...$ n times $... \phi(g) = \phi(g)^n$
+\newline
+
+By continuing this for any $n \in \mathbb{Z_{-}}$
+
+$\phi(g^n) = \phi(g^{n + 1}g) = \phi(g^{n + 1}) \frac{1}{\phi(g)} = \phi(g^{n + 2}g) \frac{1}{\phi(g)} =$
+
+$\phi(g^{n+2}) \frac{1}{\phi(g)} \frac{1}{\phi(g)} = \frac{1}{\phi(g)} ...$ n times $... \frac{1}{\phi(g)} = \phi(g)^n$
+\newline
+
+And for $n = 0$, By proposition 3.3.4: $\phi(g^0) = \phi(e) = e = \phi(g)^0$.
 \newline
 
 Therefore $\phi(g^n) = \phi(g)^n$
