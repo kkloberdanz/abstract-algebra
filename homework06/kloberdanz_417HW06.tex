@@ -54,13 +54,26 @@ that $\langle [d] \rangle < \langle [d'] \rangle$ if and only if $d'|d$.
 
 \textbf{Exercise 3.2.2}:
 Prove that the number of elements of order $n$ in $\mathbb{Z}_n$ is exactly
-$\phi(n)$, the Euler phi function of $n$.
+$\varphi(n)$, the Euler phi function of $n$.
 
 \textit{Hint: You need to decide which $[a] \in \mathbb{Z}_n$ generate $\mathbb{Z}_n$}.
 \newline
 
 \textit{Note:} The group operation in $\mathbb{Z}_n$ is $+$ (modular addition)
 \newline
+
+\begin{proof}
+  Recall, an equivalency class $[a]_n = \{ a + nk | k \in \mathbb{Z} \}$
+  Recall that $1 = gcd(a, n) \iff 1 = ma + nk$ where $a, m, k \in \mathbb{Z}$.
+  Because the generator for the integer is $\langle 1 \rangle$, we need to have
+  some $a$ where $a + nk = [a + 1]$. If $gcd(a, n) \neq 1$, then we would be in
+  a situation where there is no $a$ such that $a + nk = [a + 1]$, which would
+  imply that this particular $a$ could not be a generator of $\mathbb{Z}_n$.
+  Hence the only generators of $\mathbb{Z}_n$ are the elements of $\mathbb{Z}_n$
+  that are relatively prime with $n$. The cardinality of this set is defined as
+  $\varphi(n)$, therefore the number of elements of order $n$ in $\mathbb{Z}_n$
+  is exactly $\varphi(n)$, the Euler phi function of $n$.
+\end{proof}
 
 \textbf{Exercise 3.2.3}
 Draw the subgroup lattice for the groups
@@ -241,7 +254,7 @@ $K \times J$ for some $K < \mathbb{Z}_2$ and $J < \mathbb{Z}_2$.
   \[ (k_1, j_1)(k_2, j_2) = (k_1 k_2, j_1 j_2) \]
 
   Because $K$ and $J$ are subgroups, $k_1 k_2 \in K$ and $j_1 j_2 \in J$, hence
-  $(k_1 k_2, j_1 j_2) \in K \times J$.
+  $(k_1 k_2, j_1 j_2) \in K \times J$. \newline
 
   Third, we must show that for all $(k, j) \in K \times J$ that
   $(k, j)^{-1} \in K \times J$.
