@@ -79,6 +79,149 @@ have any theorems that tell us what the subgroups of $S_3$ are).
 that there are no other subgroups than the ones you have listed.}
 \newline
 
+To start, we will find the subgroups. \newline
+
+Recall, any subgroup will have the following properties:
+\begin{enumerate}
+  \item Each group will contain the identity, $e$
+  \item For all $g, h \in H$, $g * h \in H$
+  \item For all $g \in H$, $g^{-1} \in H$
+\end{enumerate}
+
+Hence, each of the subgroups we find for $S_3$ must also have these properties.
+To put this in plain English, each group we find will include the identity, it
+will include the product of every other member of the group, and it will also
+include the inverse of every member of the group. \newline
+
+Recall from section 1.3 on permutations that $S_n = \textit{Sym}({1..n})$, so we
+can use this definition to write $S_3$ as $\textit{Sym}(\{1, 2, 3\})$. \newline
+
+We can expand out these symmetries into the set
+
+\[ S_3 = \{e, (2 ~3), (1 ~2), (1 ~2 ~3), (1 ~3 ~2), (1 ~3) \} \]
+
+As we can see, there are six elements in this set, which if we remember back to
+probability and statistics classes, this makes sense because the number of
+permutations of $3$ distinct items is $3! = 3 \times 2 \times 1 = 6$ permutations. \newline
+
+We can also employ the powerful CAS system, Sage Mathematics, to automate this task.
+\begin{verbatim}
+sage: G = SymmetricGroup(3)
+sage: {i for i in G}
+{(), (2,3), (1,2), (1,2,3), (1,3,2), (1,3)}
+\end{verbatim}
+
+We will now find each of the subgroups, $H$, of this symmetry set. \newline
+
+Let's begin with $H_1 = \{e\}$, the set that only contains the inverse. Let's
+verify the three properties listed above. Notice that for the sake of brevity,
+I will exclude repeats when verifying below. For example, I show that
+$e \circ e = e \in H_1$, therefore we know that this will hold for $H_1$
+through $H_6$, and therefore does not need to be shown each time. \newline
+
+\begin{enumerate}
+  \item $e \in H_1$
+  \item $e \circ e = e \in H_1$
+  \item $e \circ e = e \in H_1$
+\end{enumerate}
+
+Let $H_2 = \{e, (2 ~3)\}$.
+
+\begin{enumerate}
+  \item $e \in H_2$
+  \item
+  \[ e \circ (2 ~3) = (2 ~3) \circ e = (2 ~3) \in H_2 \]
+  And
+  \[ (2 ~3) \circ (2 ~3) = e \in H_2 \]
+  \item $(2 ~3) \circ (2 ~3) = e \in H_2$
+\end{enumerate}
+
+Let $H_3 = \{e, (1 ~2)\}$.
+
+\begin{enumerate}
+  \item $e \in H_3$
+  \item
+  \[ e \circ (1 ~2) = (1 ~2) \circ e = (1 ~2) \in H_3 \]
+  And
+  \[ (1 ~2) \circ (1 ~2) = e \in H_3 \]
+  \item $(1 ~2) \circ (1 ~2) = e \in H_3$
+\end{enumerate}
+
+Let $H_4 = \{e, (1 ~3)\}$.
+
+\begin{enumerate}
+  \item $e \in H_4$
+  \item
+  \[ e \circ (1 ~3) = (1 ~3) \circ e = (1 ~3) \in H_4 \]
+  And
+  \[ (1 ~3) \circ (1 ~3) = e \in H_4 \]
+  \item $(1 ~3) \circ (1 ~3) = e \in H_4$
+\end{enumerate}
+
+Let $H_5 = \{e, (1 ~2 ~3), (1 ~3 ~2) \}$.
+
+\begin{enumerate}
+  \item $e \in H_5$
+  \item
+  \[ e \circ (1 ~2 ~3) = (1 ~2 ~3) \circ e = (1 ~2 ~3) \in H_5 \]
+  And
+  \[ e \circ (1 ~3 ~2) = (1 ~3 ~2) \circ e = (1 ~3 ~2) \in H_5 \]
+  And
+  \[ (1 ~3 ~2) \circ (1 ~2 ~3) = e \in H_5 \]
+  And
+  \[ (1 ~2 ~3) \circ (1 ~3 ~2) = e \in H_5 \]
+  And
+  \[ (1 ~2 ~3) \circ (1 ~2 ~3) = (3 ~1 ~2) \in H_5 \]
+  And
+  \[ (1 ~3 ~2) \circ (1 ~3 ~2) = (1 ~2 ~3) \in H_5 \]
+
+  \item
+  \[ (1 ~3 ~2) \circ (1 ~2 ~3) = e \in H_5 \]
+  And
+  \[ (1 ~2 ~3) \circ (1 ~3 ~2) = e \in H_5 \]
+\end{enumerate}
+
+Now the for this beast, $H_6 = \{ e, (2 ~3), (1 ~2), (1 ~2 ~3), (1 ~3 ~2), (1 ~3) \}$
+\newline
+
+To satisfy property 1, we see that $e \in H_6$.
+
+We arrive at $H_6$ by the procedure below.
+\begin{enumerate}
+  \item Start with another set, for example $H_2$. We will see later on that we
+  can start with any of our $H$ sets from above, and this procedure will still
+  work.
+  \item Append another item from $S_3$ into $H_6$.
+  \item Calculate to composition of that element by each element already in
+  $H_6$ and append that element into $H_6$.
+  \item Repeat step 3 until the composition of every item has been calculated
+  and appended to $H_6$.
+\end{enumerate}
+
+By following the procedure above, we construct $H_6$, which interestingly enough
+happens to also be $S_3$. This procedure will satisfy property 2. \newline
+
+From the calculations for $H_1$ through $H_5$, we have already worked out the
+inverses of each element of $H_6$, and we can see that for any element of $H_6$
+that the inverse is also present in $H_6$. \newline
+
+By following this procedure starting with any set $H$ as our starting set, we
+will construct the same set $H_6$ each and every time. Therefore, we have shown
+that there are precisely six subgroups of $S_3$, because by appending any other
+element of $S_3$ to sets $H_2$ through $H_5$ and following this procedure, we
+only ever construct $H_6$. \newline
+
+Therefore, our six subgroups of $S_3$ are:
+
+\[ H_1 = \{e\} \]
+\[ H_2 = \{e, (2 ~3)\} \]
+\[ H_3 = \{e, (1 ~2)\} \]
+\[ H_4 = \{e, (1 ~3)\} \]
+\[ H_5 = \{e, (1 ~2 ~3), (1 ~3 ~2) \} \]
+\[ H_6 = \{ e, (2 ~3), (1 ~2), (1 ~2 ~3), (1 ~3 ~2), (1 ~3) \} \]
+
+The lattice drawing can be found below:
+
 \includegraphics{lattice-S3}
 
 \textbf{Exercise 3.2.5}
