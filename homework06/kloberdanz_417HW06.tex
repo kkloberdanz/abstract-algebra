@@ -222,13 +222,44 @@ Therefore, our six subgroups of $S_3$ are:
 
 The lattice drawing can be found below:
 
-\includegraphics{lattice-S3}
+\includegraphics{lattice-S3} \newline
 
 \textbf{Exercise 3.2.5}
 Prove that if $G$ and $H$ are groups and $K < G$, $J < H$ are subgroups, then
 $K \times J \subset G \times H$ is a subgroup. Construct an example of a
 subgroup of $\mathbb{Z}_2 \times \mathbb{Z}_2$ which is \textbf{not} of the form
-$K \times J$ for some $K < \mathbb{Z}_2$ and $j < \mathbb{Z}_2$.
+$K \times J$ for some $K < \mathbb{Z}_2$ and $J < \mathbb{Z}_2$.
+
+\begin{proof}
+  First we will show that $K \times J \subset G \times H$. Let $k \in K$,
+  $j \in J$, $g \in G$, and $h \in H$. Because $K < G$ and $J < H$, $k \in G$
+  and $j \in H$ for all $k$ and $j$, hence for any $k$, $j$, $g$, and $h$,
+  $(k, j) \subset (g, h)$. \newline
+
+  Second, we must show that for all $(k_1, j_1), (k_2, j_2) \in K \times J$ that
+  $(k_1, j_1)(k_2, j_2) \in K \times J$.
+  \[ (k_1, j_1)(k_2, j_2) = (k_1 k_2, j_1 j_2) \]
+
+  Because $K$ and $J$ are subgroups, $k_1 k_2 \in K$ and $j_1 j_2 \in J$, hence
+  $(k_1 k_2, j_1 j_2) \in K \times J$.
+
+  Third, we must show that for all $(k, j) \in K \times J$ that
+  $(k, j)^{-1} \in K \times J$.
+
+  \[ (k, j)(k, j)^{-1} = (k, j)(k^{-1}, j^{-1}) = (kk^{-1}, jj^{-1}) = (e, e) \]
+
+  Verification:
+  \[ (e, e)(k, j) = (ke, je) = (k, j) = (ek, ej) = (k, j)(e, e) \]
+
+  Because $K$ and $J$ are subgroups, $k^{-1} \in K$ and $j^{-1} \in J$.
+  Hence $(k^{-1}, j^{-1}) \in K \times J$, which is the inverse of $K \times J$.
+  \newline
+
+  Because of these three reasons, $K \times J \subset G \times H$ is a subgroup,
+  so therefore we can write:
+
+  \[ K \times J < G \times H \]
+\end{proof}
 
 \end{myparindent}
 \end{document}
