@@ -47,6 +47,65 @@ if $*$ is an associative operation such that: \newline
 for all $g, h \in G$ there exist $x, y \in G$ such that $g * x = h$ and $y * g = h$.
 \newline
 
+\begin{proof}
+  Recall the definition of a group:
+  \begin{enumerate}
+    \item The operation * is associative.
+    \item There is an identity $e \in G$ with the property that $e * g = g * e = g$
+    for all $g \in G$
+    \item For all $g \in G$, there exists an inverse $g^{-1} \in G$, with the
+    property that $g * g^{-1} = g^{-1} * g = e$
+  \end{enumerate}
+
+  For 1, we are given in the problem statement that $*$ is associative. \newline
+
+  For 2, we will show that the identity exists, and the identity is unique \newline
+
+  Let's determine that there is an identity. We will demonstrate a proof by contradiction.
+  We will assume that for any set with no identity that for all
+  $g, h \in G$ there exist $x, y \in G$ such that $g * x = h$ and $y * g = h$.
+  Let's use the set $X = \mathbb{N} \backslash \{0\} = \{1, 2, 3, ...\}$ and the
+  associative operator $+$.
+  We can see that if $g = 1$ and $h = 1$ where $g, h \in X$, then there is no
+  element in $X$ such that $g + x = h$ where $x \in X$. To put another way
+  $1 + x = 1$ if and only if $x = 0$, which is the identity, and because $0 \notin X$,
+  this contradicts the problem statement. Hence the identity
+  must be present in the set for the condition above to hold. \newline
+
+  Now let's prove that the identity element is unique for the set $G$.
+  We will demonstrate this by contradiction.
+  Let's start by assuming that there are two identity elements, $e, e' \in G$
+  such that $eg = ge = g$ and $e'g = ge' = g$. Now if $e$ is an identity, then
+  $ee' = e'$ but at the same time if $e'$ is also an identity, then $ee' = e$,
+  therefore $e' = ee' = e$, a contradiction that $e$ and $e'$ are different
+  identities, hence the identity $e \in G$ is unique. \newline
+
+  By showing that the identity exists and is unique in $G$, we know that if $e$ is the
+  identity, then $e * g = g$ and $e * h = h$. \newline
+
+  For 3, we will demonstrate another proof by contradiction. We will show that
+  the condition in the problem statement cannot hold if there does not exist
+  an inverse. We have already shown that our set must contain the identity.
+  Let us examine the natural numbers, $\mathbb{N} = \{ 0, 1, 2, ... \}$.
+  $g, g^{-1} \in N$ if and only if $0 = g + g^{-1}$ for all $g$. Clearly, the only
+  value for $g$ that satisfies this is when $g = g^{-1} = 0$. For all other
+  values of $g$, there does not exist a $g^{-1}$ such that $g + g^{-1} = 0$.
+  Hence the inverse must exist in $G$ for the condition in the problem statement
+  to hold. \newline
+
+  We have shown that: \newline
+  For all $g, h \in G$ there exist $x, y \in G$ such that $g * x = h$ and $y * g = h$
+  $\iff$ $*$ is associative \textbf{and} there is an identity $e \in G$ with the
+  property that $e * g = g * e = g$ for all $g \in G$ \textbf{and} for all
+  $g \in G$, there exists an inverse $g^{-1} \in G$, with the property that
+  $g * g^{-1} = g^{-1} * g = e$, which is the definition of a group, therefore
+  a nonempty set $G$ with an associative operation $*$ is a group if
+  and only if the equations $g * x = h$ and $x * g = h$ have solutions in $G$
+  for all $g, h \in G$.
+
+\end{proof}
+
+
 \textbf{Exercise 3.2.1}:
 Suppose $n \ge 2$ is an integer and $d, d' > 0$ are two divisors of $n$. Prove
 that $\langle [d] \rangle < \langle [d'] \rangle$ if and only if $d'|d$.
