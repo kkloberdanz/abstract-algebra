@@ -32,7 +32,7 @@
 \begin{myparindent}{0pt}
 
 Kyle Kloberdanz \newline
-5 March 2022 \newline
+Math 417
 
 \textbf{Exercise 3.1.4}:
 Prove that a nonempty set $G$ with an associative operation $*$ is a group if
@@ -51,6 +51,19 @@ for all $g, h \in G$ there exist $x, y \in G$ such that $g * x = h$ and $y * g =
 Suppose $n \ge 2$ is an integer and $d, d' > 0$ are two divisors of $n$. Prove
 that $\langle [d] \rangle < \langle [d'] \rangle$ if and only if $d'|d$.
 \newline
+
+\begin{proof}
+Let's start by assuming that $\langle [d] \rangle < \langle [d'] \rangle$.
+Let $x, n \in \mathbb{Z}$.
+
+\[ \langle [d] \rangle < \langle [d'] \rangle \implies [d] = \langle [d'] \rangle \implies [d] = [d']^x \implies [d]_n = [d']_n^x \implies \]
+\[ d \equiv d'x \pmod n \implies d' | d \]
+
+Working backwards:
+
+\[ d' | d \implies d \equiv d'x \pmod n \implies [d]_n = [d']_n^x \implies [d] = [d']^x \implies \]
+\[ [d] = \langle [d'] \rangle \implies \langle [d] \rangle < \langle [d'] \rangle \]
+\end{proof}
 
 \textbf{Exercise 3.2.2}:
 Prove that the number of elements of order $n$ in $\mathbb{Z}_n$ is exactly
