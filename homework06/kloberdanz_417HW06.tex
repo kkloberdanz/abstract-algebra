@@ -115,13 +115,17 @@ that $\langle [d] \rangle < \langle [d'] \rangle$ if and only if $d'|d$.
 Let's start by assuming that $\langle [d] \rangle < \langle [d'] \rangle$.
 Let $x, n \in \mathbb{Z}$.
 
-\[ \langle [d] \rangle < \langle [d'] \rangle \implies [d] = \langle [d'] \rangle \implies [d] = [d']^x \implies [d]_n = [d']_n^x \implies \]
+\[ \langle [d] \rangle < \langle [d'] \rangle \implies [d] \in \langle [d'] \rangle \implies [d] = [d']^x \implies [d]_n = [d']_n^x \implies \]
 \[ d \equiv d'x \pmod n \implies d' | d \]
 
 Working backwards:
 
 \[ d' | d \implies d \equiv d'x \pmod n \implies [d]_n = [d']_n^x \implies [d] = [d']^x \implies \]
-\[ [d] = \langle [d'] \rangle \implies \langle [d] \rangle < \langle [d'] \rangle \]
+\[ [d] \in \langle [d'] \rangle \implies \langle [d] \rangle < \langle [d'] \rangle \]
+
+Because we have shown the implication goes both ways, therefore
+
+\[ \langle [d] \rangle < \langle [d'] \rangle \iff d'|d \]
 \end{proof}
 
 \textbf{Exercise 3.2.2}:
