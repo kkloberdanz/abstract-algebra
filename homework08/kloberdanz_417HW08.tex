@@ -93,6 +93,16 @@ $a \in \mathbb{Z}$, we have $a^p \equiv a \pmod p$. \textit{Hint: Consider the
 two cases $p|a$ and $p \nmid a$, in the latter case thinking about the group
 $\mathbb{Z}_p^{\times}$}.
 \begin{proof}
+  If $p | a$ then
+
+  \[ a^p \equiv a \pmod p \implies 0 \equiv 0 \pmod p \]
+
+  Otherwise, if $p \nmid a$, then dividing both sides by $a$, we get:
+
+  \[ a^p \equiv a \pmod p \implies a^{p-1} \equiv 1 \pmod p \]
+
+  Because $p$ is prime and $p \nmid a$ then there exists no common factors
+  between $a$ and $p$ other than 1, thus $a^p \equiv a \pmod p$.
 \end{proof}
 
 \textbf{Exercise 3.5.4}:
