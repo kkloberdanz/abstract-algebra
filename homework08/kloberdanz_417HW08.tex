@@ -75,9 +75,44 @@ $(1 ~2 ~3 ~... ~n) \in H$ \textit{and then} $\sigma^{k}(1 ~2)\sigma^{-k} \in H$
 \begin{proof}
 \end{proof}
 
-\textbf{Exercise 3.4.3}:
+\textbf{Exercise 3.4.6}:
 Prove $D_3 \cong S_3$.
 \begin{proof}
+  Recall from section 3.4.2 that we can write $D_n$ as follows where
+  $n \in \mathbb{Z}$ and $n \ge 3$.
+
+  \[ D_n = \{I, r, r^2, r^3,..., r^{n-1},j,rj, r^2 j, r^3 j,..., r^{n-1} j \} \]
+
+  Thus,
+
+  \[ D_3 = \{ e, r, r^2, j, rj, r^2j \} \]
+
+  Given that we found what $S_3$ is from a previous homework,
+
+  \[ S_3 = \{ e, (2 ~3), (1 ~2), (1 ~2 ~3), (1 ~3 ~2), (1 ~3) \} \]
+
+  Recall from lecture that every group of order $p$ where $p$ is prime is
+  isomorphic to every other group of order $p$. The proof of this from lecture
+  is as follows:
+
+  Let $g \in G$ such that $g \neq e$ then $|g| > 1$ and $|g| \vert |G| = p$
+  implies that $|g| = p$ and $|g| = |<g>| = |p| \implies <g> = G$. \newline
+
+  Given this property, if we can find that the order of $S_3$ is $p$ where $p$
+  is prime and $p = |S_3| = |D_3|$, then we have would have shown that $S_3$ is
+  isomorphic to $D_3$. \newline
+
+  Recall from assignment 6 that we worked through a
+  procedure to determine all of the subgroups of $S_3$, and we found that a
+  generator of $S_3$ is $\{ (2 ~3) (1 ~2 ~3)\}$. Because the definition of the
+  order of a group is the cardinality of its generator, $|S_3| = 2$, and 2 is
+  prime.
+  \newline
+
+  We can see from the definition of $D_3$ that $r$ and $j$ generate $D_3$, so
+  the order of $D_3$ is also 2. Because $p = |S_3| = |D_3|$ and $p$ is prime,
+  $D_3 \cong S_3$.
+
 \end{proof}
 
 \textbf{Exercise 3.4.8}:
