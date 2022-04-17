@@ -120,7 +120,9 @@ that $N \triangleleft G$ is a normal subgroup.
   First coset, assume $g \in N$, then by example 3.3.10, $gN = N = Ng \implies gN = Ng$.
 
   Second coset, assume $h \notin N$, then $hN \neq N$. At the same time, Because
-  there are only two cosets and $h \notin N$, then $hN = Nh$. \newline
+  there are only two cosets and $h \notin N$, then $h$ cannot be in the first
+  coset, and therefore it can only be in the second coset, which would mean in
+  this case that the left coset is equal to the right coset, hence $hN = Nh$. \newline
 
   Because we can show that for each coset that there exists some $g \in G$ in
   each coset such that $gN = Ng$, then by Proposition 3.5.10 $N$ is a normal
@@ -137,6 +139,28 @@ this, prove that
 \textit{Hint:} To prove the inequality, define a function from $H/K \cap H
 \rightarrow G/K$ and prove that it is well-defined and injective.
 \begin{proof}
+  Let $L < G$ such that $L = K \cup H$.
+
+  We will start by showing that there is no overlap between cosets. Let's show
+  this with a proof by contradiction. Let's assume there there is an element
+  that is common to cosets of $L$ and $gL$ such that $g \notin L$.
+  This implies that $g l_1 = g l_2$ for some $l_1, l_2 \in L$.
+
+  \[ g l_1 = l_2 \implies \]
+  \[ g l_1 l_1^{-1} = l_2 l_1^{-1} \implies \]
+  \[ g = l_2 l_1^{-1} \]
+
+  Because $l_1$ and $l_2$ are in $L$, $l_1 l_2 \in L$. But this implies that
+  $g \in L$, which is a contradiction. Hence there can be no common elements
+  between cosets of $L$, and therefore $H \cap gK$ will either be empty or
+  equal to a coset of $K \cap H$ in $H$. \newline
+
+  Because there is no overlap between cosets, and $K, H, < G$, and $|K|$ and
+  $|H|$ are either equal to or less than $G$, and $|K \cap H|$ is either equal
+  to or less than $|K|$.
+
+  then the number of cosets of $K \cap H$ in $H$ cannot be larger than the
+  number of cosets of $K$ in $G$, hence $[H ~: ~K \cap H] \le [G ~: ~K]$.
 \end{proof}
 
 \end{myparindent}
