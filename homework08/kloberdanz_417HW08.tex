@@ -109,6 +109,22 @@ $\mathbb{Z}_p^{\times}$}.
 Suppose $G$ is a group and $N < G$ is a subgroup with $[G ~: ~N] = 2$. Prove
 that $N \triangleleft G$ is a normal subgroup.
 \begin{proof}
+  Recall Proposition 3.5.10, $N$ is normal in $G$ $\iff$ for all $g \in G, gN = Ng$.
+  \newline
+  $[G ~: N] = 2$ implies the number of left cosets of $N$ in $G$ is 2. Because
+  of this, we will only need to prove this for two cases, i.e., the two cosets.
+  \newline
+
+  Let $g, h \in G$
+
+  First coset, assume $g \in N$, then by example 3.3.10, $gN = N = Ng \implies gN = Ng$.
+
+  Second coset, assume $h \notin N$, then $hN \neq N$. At the same time, Because
+  there are only two cosets and $h \notin N$, then $hN = Nh$. \newline
+
+  Because we can show that for each coset that there exists some $g \in G$ in
+  each coset such that $gN = Ng$, then by Proposition 3.5.10 $N$ is a normal
+  subgroup of $G$, i.e., $N \triangleleft G$.
 \end{proof}
 
 \textbf{Exercise 3.5.6}:
