@@ -76,10 +76,45 @@ $(1 ~2 ~3)(5 ~6) \in S_6$ is $1 + 2 + 3 = 6$, since there is a 1-cycle, a
 \newline
 
 \textbf{Exercise 3.4.2}:
-Suppose $\sigma_1, \sigma_2 \in S_n$. Using the previous exercies, prove that
+Suppose $\sigma_1, \sigma_2 \in S_n$. Using the previous exercise, prove that
 $\sigma_1$ and $\sigma_2$ have the same cycle structure if and only if they
 are conjugate.
 \begin{proof}
+  Let's start by assuming that $\sigma_2 = \tau \sigma_1 \tau^{-1}$. By the proof
+  we found in 3.4.1:
+
+  \[ \sigma_2(k_i) = \tau \sigma_1(k_i) \]
+
+  Because $\tau$ is a bijection, the cycle structure of $\sigma_2$ is the same
+  as $\tau \sigma_1$, which implies that conjugates have the same cycle structure.
+  Because $\sigma_1$ and $\sigma_2$ were chosen arbitrarily, the proof also applies
+  when swapping $\sigma_1$ and $\sigma_2$.
+  \newline
+
+  Now let's assume that $\sigma_1$ and $\sigma_2$ have the same cycle structure.
+  We will show that this implies that they are conjugates. Because the cycle
+  structures are the same for $\sigma_1$ and $\sigma_2$, the number of 1-cycles
+  in $\sigma_1$ is the same as the number of 1-cycles in $\sigma_2$. Same for
+  2-cycles, 3-cycles, ..., j-cycles. Any item that would be "locked" by a 1-cycle
+  in $\sigma_1$ would also have a corresponding 1-cycle in $\sigma_2$ to lock
+  possibly a different value. Same goes for any 2-cycle to j-cycle. Because of
+  this, any $k_i$ in $\sigma_1$ would be sent to $k_l$ in $\sigma_2$ by the
+  corresponding $l$ in $\tau$, thus $\sigma_2(k_l) = \tau \sigma(k_i)$, by
+  what we have shown in exercise 3.4.1, this implies:
+
+  \[ \sigma_2(k_l) = \tau \sigma(k_i) = \tau \sigma \tau^{-1} (k_i) \]
+
+  Hence $\sigma_1$ and $\sigma_2$ have the same cycle structure implies that
+  they are conjugates. \newline
+
+  Because $\sigma_1$ and $\sigma_2$ having the same cycle structure
+  $\implies \sigma_1$ and $\sigma_2$ are conjugate and $\sigma_1$ and
+  $\sigma_2$ are conjugate $\implies$ $\sigma_1$ and $\sigma_2$ having the same
+  cycle structure: \newline
+
+
+  $\sigma_1$ and $\sigma_2$ having the same cycle structure
+  $\iff \sigma_1$ and $\sigma_2$ are conjugate.
 \end{proof}
 
 \textbf{Exercise 3.4.3}:
